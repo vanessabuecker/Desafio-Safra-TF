@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+}
+
+.container-home {
+    display: block;
+    width: 100%;
+}
+
+.retangle-home {
+    background-color: #00003C;
+    height: 30vh;
+}
+
+.logo-home {
+    display: flex;
+    justify-items: center;
+}
+
+.userName {
+    width: 30%;
+    margin: auto;
+    color: white;
+    text-align: start;
+    margin-left: 20px;
+}
+
+#logo-safra-home {
+    width: 10%;
+}
+
+.retangle-bottom-home {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #00003C;
+}
+
+.content-bottom-retangle {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.total-balance {
+    width: 50%;
+    padding: 2%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #00003C;
+    color: #00003C;
+}
+
+.txt-balance {
+    color: red;
+}
+
+.totalValue {
+    font-size: 1.8rem;
+    padding: 2%;
+}
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.button-openbanking-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #00003C;
+}
+
+.container-bank {
+    display: block;
+    width: 20%;
+    height: auto;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5%;
+    border: 1px solid #00003C;
+    margin-left: 5%;
+}
+
+.account-type {
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+#total-value-template {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.logo-bank {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.balance-template {
+    display: flex;
+}
+
+#logo-alfa {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 5px;
+}
+
+#icon-pix,
+#icon-home {
+    width: 2.5%;
+    height: 2.5%;
+}
+
+#icon-logout {
+    width: 2.5%;
+}
+
+#icon-ob-add {
+    height: 5vh;
+}
+
+.icon-eyes {
+    width: 5%;
+}
+
+.icon-eyes-template {
+    width: 15%;
+    margin-left: 25px;
+}
+
+.pendencies {
+    margin: 5% 0 1% 5%;
+    color: #00003C;
+    font-size: 1.2rem;
+}
+
+.pendencies-title {
+    display: flex;
+    gap: 5px;
+}
+
+.pendencies-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    border: 1px solid #00003C;
+    color: #00003C;
+}
+
+#item-list {
+    margin-right: 45%;
+    font-size: 1.2rem;
+    color: #00003C;
+}
+
+#balance-pend {
+    font-size: 1.2rem;
+    color: #00003C;
+    font-weight: 500;
+}
+
+.icon-caution {
+    width: 1.5vw;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+@media only screen and (max-width: 845px) and (min-width: 389px) {
+    #logo-safra-home {
+        width: 35%;
+    }
+
+    .retangle-home {
+        height: 20vh;
+    }
+
+    .total-balance {
+        width: 90%;
+        height: 20vh;
+        padding: 5%;
+    }
+
+    #button-add {
+        width: 30%;
+        margin: 72% 0 2% 0;
+    }
+
+    .totalValue {
+        font-size: 1.8rem;
+        padding: 2%;
+    }
+
+    .container-bank {
+        width: 45%;
+        height: 15vh;
+    }
+
+    .account-type {
+        padding: 2px;
+        margin-bottom: 5px;
+    }
+
+    #icon-pix,
+    #icon-home {
+        width: 10%;
+    }
+
+    .icon-eyes {
+        width: 10%;
+    }
+
+    .icon-eyes-template {
+        width: 15%;
+        margin-left: 25px;
+    }
+
+    .pendencies {
+        margin: 5% 0 5% 5%;
+    }
+
+    .pendencies-list {
+        width: 90%;
+        padding: 2%;
+    }
+
+    .icon-caution {
+        width: 5vw;
+    }
+
+    .retangle-bottom-home {
+        padding: 3%;
+    }
+
+    #icon-logout {
+        width: 10%;
+    }
+}
