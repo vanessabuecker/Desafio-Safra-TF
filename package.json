@@ -1,5 +1,26 @@
 {
   "dependencies": {
-    "firebase": "^9.14.0"
-  }
+    "browserify": "^17.0.0",
+    "firebase": "^9.14.0",
+    "serve": "^14.1.2"
+  },
+  "name": "desafio-safra-tf",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve src"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessabuecker/Desafio-Safra-TF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessabuecker/Desafio-Safra-TF/issues"
+  },
+  "homepage": "https://github.com/vanessabuecker/Desafio-Safra-TF#readme"
 }
