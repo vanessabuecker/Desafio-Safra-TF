@@ -13,7 +13,7 @@ body {
     height: 100%;
 }
 
-.container-login {
+.container-register {
     display: block;
     width: 50%;
     height: 100%;
@@ -29,7 +29,7 @@ body {
     margin: 5% 0 5% 0;
 }
 
-.container-inputs-login {
+.container-inputs-register {
     display: block;
     width: 100%;
 }
@@ -75,7 +75,7 @@ body {
 
 @media only screen and (max-width: 845px) and (min-width: 389px) {
 
-    .container-login {
+    .container-register {
         width: 80%;
     }
 
