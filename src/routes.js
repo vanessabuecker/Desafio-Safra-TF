@@ -1,6 +1,6 @@
 import login from './pages/login/app.js';
 //import home from './pages/home/app.js';
-//import register from './pages/register/app.js';
+import register from './pages/register/app.js';
 
 const main = document.querySelector('.root');
 
@@ -8,7 +8,7 @@ const init = () => {
   main.innerHTML = '';
   switch (window.location.hash) {
     case ' ':
-      main.appendChild(login());
+      main.appendChild(register());
       break;
     case '#home':
       main.innerHTML = '';
