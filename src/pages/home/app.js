@@ -1,3 +1,5 @@
+import { banks } from "../../exports.js";
+
 export default () => {
     const container = document.createElement('div');
 
@@ -61,6 +63,12 @@ export default () => {
   </div>`;
 
     container.innerHTML = template;
+
+    const btn = container.querySelector('#icon-home')
+
+    btn.addEventListener('click', () => {
+        banks()
+    })
 
     return container;
 }
