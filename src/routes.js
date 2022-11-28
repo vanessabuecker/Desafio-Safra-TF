@@ -1,4 +1,4 @@
-//import login from './pages/login/app.js';
+import login from './pages/login/app.js';
 //import home from './pages/home/app.js';
 import register from './pages/register/app.js';
 
@@ -28,5 +28,6 @@ window.addEventListener('hashchange', () => {
 });
 
 window.addEventListener('load', () => {
+  main.appendChild(login())
   init();
 });
