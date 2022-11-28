@@ -6,11 +6,14 @@ export default () => {
       </div>
   
       <form class='container-inputs-register'>
-          <label for='text-id' class='text-inputs'>Nome</label>
-          <label for='text-id' class='text-inputs'>CPF/CNPJ</label>
+          <input class='inputs' type='text' id='input-name' />
+          <label for='text-name' class='text-inputs'>Nome</label>
+          <input class='inputs' type='number' id='input-cpf' />
+          <label for='text-cpf' class='text-inputs'>CPF/CNPJ</label>
           <input class='inputs' type='password' id='input-password' />
           <label for='text-password' class='text-inputs'>Senha</label>
-          <label for='text-id' class='text-inputs'>Saldo disponível na conta corrente do Banco Safra</label>
+          <input class='inputs' type='number' id='input-saldo' />
+          <label for='text-saldo' class='text-inputs'> Insira seu saldo disponível na conta corrente do Banco Safra</label>
       </form>
       <div class="button-register"> <a href="#home"> <button type='button' class='btn-enter' id='btn-enter'>Cadastrar</button>
       </div>
