@@ -10,10 +10,10 @@ const init = () => {
     case ' ':
       main.appendChild(register());
       break;
-    case '#home':
-      main.innerHTML = '';
-      main.appendChild(home());
-      break;
+    // case '#home':
+      // main.innerHTML = '';
+      // main.appendChild(home());
+      // break;
     case '#register':
       main.innerHTML = '';
       main.appendChild(register());

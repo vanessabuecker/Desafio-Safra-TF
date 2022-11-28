@@ -70,7 +70,7 @@ body {
     color: #00003C;
 }
 
-#forgot-password {
+.text-href {
     font-size: 0.9rem;
     color: #00003C;
     text-decoration: none;
