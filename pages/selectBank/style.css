@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+}
+
+.container-selectBank {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.retangle-selectBank {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    background-color: #00003C;
+    color: white;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+}
+
+.container-selectBank {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.title-container {
+    display: flex;
+    margin: 3% 0 1% 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-icon-selectBank {
+    width: 20%;
+}
+
+.title-text {
+    color: #00003C;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.icon-bank {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.banks-container {
+    display: flex;
+    text-align: center;
+    width: 25%;
+    padding-top: 5rem;
+    margin: auto;
+}
+
+.container-more-selectBank {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.icon-more-selectBank {
+    width: fit-content;
+    height: 3vh;
+}
+
+.retangle-bottom-home {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #00003C;
+}
+
+.content-bottom-retangle {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+.box-banks {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    grid-template-rows: 60%;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+
+@media only screen and (max-width: 845px) and (min-width: 389px) {
+
+    .select-bank {
+        text-align: center;
+        padding: 5%;
+    }
+
+    #selectBank {
+        color: #00003C;
+        font-size: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    .buttons-add-new-bank {
+        text-align: center;
+    }
+
+    #btn-add {
+        width: 30%;
+    }
+
+    .banks-container {
+        width: 60%;
+    }
+
+    .box-banks {
+        grid-template-columns: 36.33% 36.33% 36.33%;
+    }
+
+    .arrow-icon-selectBank {
+        width: 25%;
+    }
+
+    .title-text {
+        margin-left: 0;
+    }
+
+    .container-more-selectBank {
+        margin-top: 10%;
+    }
+
+    .icon-more-selectBank {
+        width: fit-content;
+        height: 3vh;
+
+    }
+}
