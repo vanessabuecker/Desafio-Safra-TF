@@ -20,3 +20,9 @@ export const getAllBanks = async () => {
       return error;
     }
   };
+
+  export {
+    getAuth,
+    createUserWithEmailAndPassword,
+    updateProfile,
+  } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js';
