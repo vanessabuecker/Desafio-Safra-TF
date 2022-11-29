@@ -23,7 +23,9 @@ export default () => {
             <div class="balance">
                 <span class="totalValue"> R$...</span> <img class="icon-eyes" src="./img/eyes-outline-icon.png"
                     alt="Ícone olhos abertos">
+                    
             </div>
+            <div class="txt-balance" id="showExt" >Vizualizar extrato</div>
         </div>
         <div class="button-openbanking-add">
             <a href="#selectBank"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
@@ -61,6 +63,46 @@ export default () => {
   container.innerHTML = template;
   const btnLogout = container.querySelector('#icon-logout');
   const btn = container.querySelector('#icon-home');
+  const showExt = container.querySelector('#showExt');
+
+  showExt.addEventListener('click', (e) => {
+    e.preventDefault();
+    const modalContentElement = document.getElementById('modal_content');
+            const modalElement = document.getElementById('modal');
+            modalElement.classList.add('show-modal');
+
+            modalContentElement.innerHTML = `
+            <div class="container-ext">
+            <div class="inst-name">Extrato</div>
+        <div class="box-ext">
+        <label for="period">Selecionar período:</label>
+    <select name="month" id="month" form="monform">
+      <option value="jan-fev">Janeiro - Fevereiro</option>
+      <option value="marc-apr">Março - Abril</option>
+      <option value="may-jun">Maio - Junho</option>
+      <option value="jul-aug">Julho - Agosto</option>
+      <option value="sep-oct">Setembro - Outubro</option>
+      <option value="nov-dec">Novembro - Dezembro</option>
+    </select>
+            <div class="ext"> 
+            <li>Água: - 100,00</li>
+            <li>Energia: -450,00</li>
+            <li>Internet: -100,00</li>
+            <li>Pensão alim.: 800,00</li>
+            
+            </div>
+        </div>
+
+    </div>`;
+  })
+
+  const spanClose = document.querySelector('#close');
+  function hideModal() {
+      const modalElement = document.getElementById('modal');
+      modalElement.classList.remove('show-modal');
+  }
+
+  spanClose.addEventListener('click', hideModal);
 
   btnLogout.addEventListener('click', (e) => {
     const main = document.querySelector('#root');
@@ -99,6 +141,7 @@ export default () => {
   }
 
   showBanks();
+  
 
   return container;
 }
