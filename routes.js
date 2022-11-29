@@ -19,7 +19,7 @@ const init = () => {
         main.innerHTML = '';
         main.appendChild(home());
         break;
-      case '#addOpenFinance':
+      case '#openFinance':
         main.innerHTML = '';
         main.appendChild(openFinance());
         break;
