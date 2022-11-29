@@ -1,13 +1,20 @@
 import { app } from './config_firebase.js';
 import {
-  getFirestore, getDocs, collection,
+  getFirestore, 
+  getDocs, 
+  collection, 
+  addDoc,
 } from './exports.js';
 
 export const db = getFirestore(app);
 
-export const banks = () => {
-  return console.log(getDocs(collection(db, 'Bancos')));
-}
+export const createDoc= (instituicao, tipo, saldo) => { 
+  return addDoc(collection(db, 'Bancos'), {
+    instituicao,
+    tipo,
+    saldo,
+  });
+};
 
 export const getAllBanks = async () => {
   try {
