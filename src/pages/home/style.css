@@ -91,14 +91,17 @@ body {
 }
 
 .container-bank {
-    display: block;
-    width: 20%;
+    display: flex;
+    width: 40%;
     height: auto;
     padding: 5px;
-    border-radius: 5px;
     margin-top: 5%;
-    border: 1px solid #00003C;
     margin-left: 5%;
+    }
+
+.bank-card{
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .account-type {
@@ -221,7 +224,7 @@ body {
 
     .container-bank {
         width: 45%;
-        height: 15vh;
+        height: 35vh;
     }
 
     .account-type {
