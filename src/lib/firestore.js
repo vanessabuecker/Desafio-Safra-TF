@@ -5,8 +5,6 @@ import {
 
 export const db = getFirestore(app);
 
-
-
 export const banks = () => {
   return console.log(getDocs(collection(db, 'Bancos')));
 }
