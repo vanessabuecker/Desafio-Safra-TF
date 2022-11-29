@@ -1,9 +1,10 @@
-import { banks } from '../../lib/exports.js';
+// import { banks } from "../../exports.js";
+import { getAllBanks } from '../../lib/exports.js';
 
 export default () => {
-    const container = document.createElement('div');
+  const container = document.createElement('div');
 
-    const template = `   <div class="container-homepg">
+  const template = `   <div class="container-homepg">
     <div class="retangle-home">
         <div class="logo-home">
             <img id="logo-safra-home" src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
@@ -28,15 +29,7 @@ export default () => {
         </div>
   
         <div class="container-bank">
-            <div class="logo-bank">
-                <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-                <span class="account-type"> Conta Corrente</span>
-            </div>
-  
-            <div class="balance-tamplate">
-                <span class="totalValue" id="total-value-template">R$ 150,00 </span> <img class="icon-eyes-template"
-                    src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-            </div>
+            
         </div>
   
         <div class="pendencies">
@@ -62,13 +55,40 @@ export default () => {
   
   </div>`;
 
-    container.innerHTML = template;
+  container.innerHTML = template;
 
-    const btn = container.querySelector('#icon-home')
+  const btn = container.querySelector('#icon-home')
 
-    btn.addEventListener('click', () => {
-        banks()
-    })
 
-    return container;
+  btn.addEventListener('click', () => {
+    return console.log(allBanks)
+  })
+
+  const showBanks = async () => {
+    const allBanks = await getAllBanks();
+    const banksTemplate = allBanks.map((bank) => {
+
+      const banks = `
+      <div class="bank-card">
+      <div class="logo-bank">
+                        <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+                        <span class="account-type"> ${bank.tipo}</span>
+                      </div>
+  
+            <div class="balance-tamplate">
+                <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+                    src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+            </div>
+            </div>`
+
+      return banks;
+    }).join('');
+    container.querySelector('.container-bank').innerHTML += banksTemplate;
+  }
+  showBanks();
+
+
+  return container;
 }
+
+
