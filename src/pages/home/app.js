@@ -1,7 +1,5 @@
-// import { banks } from "../../exports.js";
 import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
-import { auth } from '../../lib/config_firebase.js';
 
 export default () => {
 
@@ -60,7 +58,6 @@ export default () => {
 
   container.innerHTML = template;
   const btnLogout = container.querySelector('#icon-logout');
-  const btn = container.querySelector('#icon-home');
 
   btnLogout.addEventListener('click', (e) => {
     const main = document.querySelector('#root');
@@ -69,10 +66,6 @@ export default () => {
       window.location.hash = '';
     });
   });
-
-  btn.addEventListener('click', () => {
-    return console.log(allBanks)
-  })
 
   const showBanks = async () => {
     const allBanks = await getAllBanks();
@@ -84,7 +77,7 @@ export default () => {
             <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
             <span class="account-type"> ${bank.tipo}</span>
         </div>
-
+  
         <div class="balance-tamplate">
             <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
                 src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
@@ -102,5 +95,35 @@ export default () => {
 
   return container;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1,7 +1,9 @@
 import login from './pages/login/app.js';
 import home from './pages/home/app.js';
 import register from './pages/register/app.js';
+import new_bank from './pages/new_bank/app.js';
 import openFinance from './pages/openFinance/app.js';
+
 
 const main = document.querySelector('.root');
 
@@ -15,15 +17,20 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(register());
       break;
-      case '#home':
-        main.innerHTML = '';
-        main.appendChild(home());
-        break;
-      case '#openFinance':
-        main.innerHTML = '';
-        main.appendChild(openFinance());
-        break;
+    case '#new_bank':
+      main.innerHTML = '';
+      main.appendChild(new_bank());
+      break;
+    case '#home':
+      main.innerHTML = '';
+      main.appendChild(home());
+      break;
+    case '#openFinance':
+      main.innerHTML = '';
+      main.appendChild(openFinance());
+      break;
       
+
     default: main.appendChild(login());
   }
 };
