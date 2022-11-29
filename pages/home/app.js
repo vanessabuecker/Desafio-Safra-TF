@@ -26,7 +26,7 @@ export default () => {
             </div>
         </div>
         <div class="button-openbanking-add">
-            <a href="#selectBank"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
+            <a href="#openFinance"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
                     alt="Ícone open banking cor-de-rosa"> </a> Adicionar Open Finance
         </div>
   
