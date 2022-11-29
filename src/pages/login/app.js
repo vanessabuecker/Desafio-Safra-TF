@@ -16,9 +16,11 @@ export default () => {
             <button type='button'  class='btn-enter' id='btn-enter'>Entrar</button>
         </div>
         <div class="teste">
-            <a class='forgot-password' id='forgot-password' href='#NAOSEI'>Esqueci a senha</a>
+            <a class='text-href' id='btn-forgot-password' href='#NAOSEI'>Esqueci a senha</a>
         </div>
-        <a id='btn-cadastro'href='#register'>Cadastre-se</a>
+        <div class="teste">
+            <a class='text-href'id='btn-cadastro'href='#register'>Cadastre-se</a>
+        </div>
     </div> 
    `;
 
