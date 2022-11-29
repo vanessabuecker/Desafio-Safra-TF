@@ -36,7 +36,7 @@ export default () => {
               </div>
           </div>
           <div class="open-finance-container">
-              <p class="open-finance-text">Conheça o Open Finance</p>
+              <a class="open-finance-text" href="https://www.safra.com.br/o-que-e-open-finance.htm#open-finance" target="_blank">Conheça o Open Finance</a>
           </div>
       
           <div class="retangle-bottom-home">
