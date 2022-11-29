@@ -1,6 +1,14 @@
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from './exports.js';
-import { auth } from './config_firebase.js';
-import { app } from './config_firebase.js';
+import { 
+  createUserWithEmailAndPassword,
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+} from './exports.js';
+
+import {
+  auth,
+  app, 
+} from './config_firebase.js';
 
 export function register(name, email, password) {
   createUserWithEmailAndPassword(auth, email, password)

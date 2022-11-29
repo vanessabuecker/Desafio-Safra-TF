@@ -1,5 +1,5 @@
 // import { banks } from "../../exports.js";
-import { getAllBanks } from '../../lib/exports.js';
+import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
 import { auth } from '../../lib/config_firebase.js';
 
