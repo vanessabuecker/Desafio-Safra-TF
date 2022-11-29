@@ -50,9 +50,7 @@ export default () => {
       divErro.innerHTML = "Por favor, preencha todos os campos.";
     } else {
       register(email.value, password.value, nameProfile.value);
-      createCollectionDataUser(cpf.value, balance.value);
-      console
-        .log(createCollectionDataUser(cpf.value, balance.value))
+      createCollectionDataUser(email.value, cpf.value, balance.value)
         .then(() => {
           window.location.hash = '#home'
         })
