@@ -4,7 +4,6 @@ import register from './pages/register/app.js';
 import new_bank from './pages/new_bank/app.js';
 import openFinance from './pages/openFinance/app.js';
 
-
 const main = document.querySelector('.root');
 
 const init = () => {
