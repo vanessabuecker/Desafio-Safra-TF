@@ -11,19 +11,22 @@ body {
     height: 100%;
 }
 
-.container-home {
-    display: block;
-    width: 100%;
+.container-homepg {
+    width: 80%;
 }
 
 .retangle-home {
     background-color: #00003C;
-    height: 30vh;
+    position: absolute;
+    height: 18%;
+    left: 0;
+    right: 0;
 }
 
 .logo-home {
     display: flex;
     justify-items: center;
+    width: fit-content;
 }
 
 .userName {
@@ -35,7 +38,7 @@ body {
 }
 
 #logo-safra-home {
-    width: 10%;
+    width: 38%;
 }
 
 .retangle-bottom-home {
@@ -53,7 +56,7 @@ body {
 }
 
 .total-balance {
-    width: 50%;
+    width: 35%;
     padding: 2%;
     margin: auto;
     border-radius: 5px;
@@ -92,14 +95,15 @@ body {
 
 .container-bank {
     display: flex;
-    width: 40%;
+    width: 30%;
     height: auto;
     padding: 5px;
     margin-top: 5%;
     margin-left: 5%;
-    }
+    gap: 10px;
+}
 
-.bank-card{
+.bank-card {
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -140,6 +144,7 @@ body {
 
 #icon-logout {
     width: 2.5%;
+    cursor: pointer;
 }
 
 #icon-ob-add {
@@ -170,9 +175,10 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    border-radius: 5px;
     width: 90%;
     margin: auto;
-    padding: 2%;
+    padding: 1%;
     border: 1px solid #00003C;
     color: #00003C;
 }
@@ -223,8 +229,10 @@ body {
     }
 
     .container-bank {
-        width: 45%;
-        height: 35vh;
+        width: 95%;
+        margin: auto;
+        padding: 5px;
+        margin-top: 5%;
     }
 
     .account-type {
@@ -247,7 +255,7 @@ body {
     }
 
     .pendencies {
-        margin: 5% 0 5% 5%;
+        margin: 8% 0 8% 5%;
     }
 
     .pendencies-list {

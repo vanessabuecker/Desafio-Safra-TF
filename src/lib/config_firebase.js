@@ -6,8 +6,8 @@ const firebaseConfig = {
   projectId: "desafio-safra-9dce0",
   storageBucket: "desafio-safra-9dce0.appspot.com",
   messagingSenderId: "182683468384",
-  appId: "1:182683468384:web:272e991e8f6235a6d5b905",
-  measurementId: "G-55V69RYHX6"
+  appId: "1:182683468384:web:95088ef87ebdbee7d5b905",
+  measurementId: "G-123VBVW7KT"
 };
 
 export const app = initializeApp(firebaseConfig);
