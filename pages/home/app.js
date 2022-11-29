@@ -1,4 +1,4 @@
-import { banks } from "../../exports.js";
+import { banks } from '../../lib/exports.js';
 
 export default () => {
     const container = document.createElement('div');
