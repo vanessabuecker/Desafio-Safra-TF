@@ -1,3 +1,5 @@
+import { logout } from '../../lib/auth.js';
+
 export default () => {
     const container = document.createElement('div');
     const template = `      
@@ -8,8 +10,8 @@ export default () => {
         </div>
 
         <div class="title-container">
-            <a href="#addOpenFinance">
-            <img class="arrow-icon-selectBank" src="./img/arrow.png" alt="Ícone - seta para a esquerda">
+            <a href="#selectBank">
+                <img id="arrow-icon" src="../src/img/arrow.png" alt="Ícone - seta para a esquerda">
             </a>
             <p class="title-text"> Selecione o Banco</p> 
         </div>
@@ -62,6 +64,27 @@ export default () => {
   `;
 
     container.innerHTML = template;
+
+    container.innerHTML = template;
+
+    const btnLogout = container.querySelector('#icon-logout');
+
+    btnLogout.addEventListener('click', (e) => {
+        const main = document.querySelector('#root');
+        e.preventDefault();
+        logout().then(() => {
+          window.location.hash = '';
+        });
+      });
+
+    const btnHome = container.querySelector('#icon-home');
+
+    btnHome.addEventListener('click', () => {
+        window.location.hash = '#home';
+      });
+
+
+
 
     return container;
 };
