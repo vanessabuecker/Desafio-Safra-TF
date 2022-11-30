@@ -5,19 +5,6 @@ export default () => {
 
   const container = document.createElement('div');
   const template = `   <div class="container-homepg">
-<<<<<<< HEAD
-   <div class="retangle-home">
-       <div class="logo-home">
-           <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
-               Fulano!</span>
-       </div>
-       <div class="total-balance">
-           <p class="txt-balance">Saldo disponível</p>
-           <div class="balance">
-                <span class="totalValue"> R$15.300,00</span> <img class="icon-eyes" src="./img/eyes-off-icon.png"
-                    alt="Ícone olhos fechados">
-           </div>
-=======
     <div class="retangle-home">
         <div class="logo-home">
             <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
@@ -49,6 +36,19 @@ export default () => {
   
         <div class="container-bank">
             
+        <div class="bank-card">
+        <div class="imgs">
+                <div class="logo-bank">
+                    <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+                    <span class="account-type"> Bancos </span>
+                </div>
+      
+                <div class="balance-tamplate">
+                    <span class="totalValue" id="total-value-template"> Bancos </span> <img class="icon-eyes-template"
+                        src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+                </div>
+        </div>
+            </div>
         </div>
   
         <div class="pendencies">
@@ -65,7 +65,6 @@ export default () => {
   
     <div class="retangle-bottom-home">
         <div class="content-bottom-retangle">
->>>>>>> 011605b4d2a981582a8ece07d07e484d58f36947
 
            <p class="txt-balance">Lançamentos futuros</p>
            <div class="balance">
@@ -182,7 +181,6 @@ export default () => {
     });
   });
 
-<<<<<<< HEAD
   let imageMove = container.querySelector('.container-bank');
   window.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
@@ -192,11 +190,11 @@ export default () => {
     else imageMove.scrollLeft -= 100;
   });
 
-    const showBanks = async () => {
-      const allBanks = await getAllBanks();
-      const banksTemplate = allBanks.map((bank) => {
+  const showBanks = async () => {
+    const allBanks = await getAllBanks();
+    const banksTemplate = allBanks.map((bank) => {
 
-        const banks = `
+      const banks = `
         <div class="bank-card">
   <div class="imgs">
           <div class="logo-bank">
@@ -210,28 +208,20 @@ export default () => {
           </div>
   </div>
       </div>`
-          ;
-        return banks;
+        ;
+      return banks;
 
-      }).join('');
+    }).join('');
 
-      container.querySelector('.container-bank').innerHTML += banksTemplate;
-    }
+    container.querySelector('.container-bank').innerHTML += banksTemplate;
+  }
 
-    showBanks();
+  showBanks();
 
-=======
-  
-  
->>>>>>> 011605b4d2a981582a8ece07d07e484d58f36947
   return container;
 }
 
-
-
-
-
-  const showBanks = async () => {
+const showBanks = async () => {
   const allBanks = await getAllBanks();
   const banksTemplate = allBanks.map((bank) => {
 

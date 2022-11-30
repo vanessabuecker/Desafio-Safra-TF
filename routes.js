@@ -8,7 +8,6 @@ import selectMorebank from './pages/selectMoreBank/app.js';
 import selectMoreApp from './pages/selectMoreApp/app.js';
 import credentials from './pages/credentials/app.js';
 
-
 const main = document.querySelector('.root');
 
 const init = () => {
