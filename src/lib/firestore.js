@@ -1,28 +1,31 @@
 import {
 
   app,
-  auth } from './config_firebase.js';
+  auth
+} from './config_firebase.js';
 
 import {
 
-  getFirestore, 
-  getDocs, 
-  collection, 
+  getFirestore,
+  getDocs,
+  collection,
   addDoc,
   getDoc,
   doc,
+  updateDoc,
+  arrayUnion,
 
 } from './exports.js';
 
 export const db = getFirestore(app);
 
-export const getBanksById = async (banksId) => { 
+export const getBanksById = async (banksId) => {
   const docRef = doc(db, 'Bancos', banksId)
   const docSnap = await getDoc(docRef)
   return docSnap.data()
- }; 
+};
 
-export const createDoc= (instituicao, tipo, saldo) => { 
+export const createDoc = (instituicao, tipo, saldo) => {
   return addDoc(collection(db, 'Bancos'), {
     instituicao,
     tipo,
@@ -56,3 +59,9 @@ export const createCollectionDataUser = async (email, cpf, saldo) => {
   }
 };
 
+export const addClientToInstitution = async (clientId, bankId) => {
+  const bankRef = doc(db, "Bancos", bankId);
+  await updateDoc(bankRef, {
+    cliente: arrayUnion(clientId)
+  });
+}
