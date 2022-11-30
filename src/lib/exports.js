@@ -7,6 +7,8 @@ export {
     getDocs,
     getFirestore,
     addDoc,
+    getDoc,
+    doc,
 } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
 
 export {
