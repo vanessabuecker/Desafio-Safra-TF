@@ -1,4 +1,4 @@
-import { getAllBanks } from '../../lib/firestore.js';
+// import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
 
 export default () => {
@@ -13,16 +13,20 @@ export default () => {
         <div class="total-balance">
             <p class="txt-balance">Saldo disponível</p>
             <div class="balance">
-                <span class="totalValue"> R$15.300,00</span> <img class="icon-eyes" src="./img/eyes-off-icon.png"
-                    alt="Ícone olhos fechados">
+                <span class="totalValue"> R$15.300,00</span> 
+            </div> 
+            <div>
+                <img id='btn-eyes' class='icon-eyes' alt='Ícone de olhos para mostrar/ocultar' src="./img/eyes-outline-icon.png">
             </div>
   
             <p class="txt-balance">Lançamentos futuros</p>
             <div class="balance">
-                <span class="totalValue"> R$...</span> <img class="icon-eyes" src="./img/eyes-outline-icon.png"
-                    alt="Ícone olhos abertos">
-                    
+                <span class="totalValue"> R$...</span> 
+            </div> 
+            <div>
+                <img id='btn-eyes' class='icon-eyes' alt='Ícone de olhos para mostrar/ocultar' src="./img/eyes-outline-icon.png">    
             </div>
+
             <div class="txt-balance" id="showExt" >Vizualizar extrato</div>
         </div>
         <div class="button-openbanking-add">
@@ -57,6 +61,26 @@ export default () => {
     </div>
   
   </div>`;
+
+  /*const btnShow = container.querySelector('#btn-eyes');
+  const balance = container.querySelector('.balance');
+
+  btnShow.addEventListener('click', function() {
+    if (balance.style.display === 'block') {
+      balance.style.display = 'none';
+    } else{
+      balance.style.display = 'block';
+    }
+
+  });*/
+
+  /*const btnShow = container.querySelector('#btn-eyes');
+
+  btnShow.addEventListener('click', function() {
+    const balance = container.querySelector('.balance');
+    balance.classList.toggle("hide");
+
+  });*/
 
   container.innerHTML = template;
   const btnLogout = container.querySelector('#icon-logout');
@@ -111,35 +135,40 @@ export default () => {
     });
   });
 
-  const showBanks = async () => {
-    const allBanks = await getAllBanks();
-    const banksTemplate = allBanks.map((bank) => {
-
-      const banks = `
-      <div class="bank-card">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> ${bank.tipo}</span>
-        </div>
   
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-    </div>`
-        ;
-      return banks;
-
-    }).join('');
-
-    container.querySelector('.container-bank').innerHTML += banksTemplate;
-  }
-
-  showBanks();
   
-
   return container;
 }
+
+
+
+
+
+//   const showBanks = async () => {
+//   const allBanks = await getAllBanks();
+//   const banksTemplate = allBanks.map((bank) => {
+
+//     const banks = `
+//     <div class="bank-card">
+//       <div class="logo-bank">
+//           <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+//           <span class="account-type"> ${bank.tipo}</span>
+//       </div>
+
+//       <div class="balance-tamplate">
+//           <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+//               src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+//       </div>
+//   </div>`
+//       ;
+//     return banks;
+
+//   }).join('');
+
+//   container.querySelector('.container-bank').innerHTML += banksTemplate;
+// }
+
+// showBanks();
 
 
 

@@ -9,10 +9,18 @@ import {
   getDocs, 
   collection, 
   addDoc,
+  getDoc,
+  doc,
 
 } from './exports.js';
 
 export const db = getFirestore(app);
+
+export const getBanksById = async (banksId) => { 
+  const docRef = doc(db, 'Bancos', banksId)
+  const docSnap = await getDoc(docRef)
+  return docSnap.data()
+ }; 
 
 export const createDoc= (instituicao, tipo, saldo) => { 
   return addDoc(collection(db, 'Bancos'), {
