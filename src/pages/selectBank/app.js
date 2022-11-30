@@ -1,4 +1,6 @@
 import { getBanksById } from '../../lib/firestore.js';
+import { addClientToInstitution } from '../../lib/firestore.js';
+import { auth } from '../../lib/config_firebase.js';
 
 export default () => {
     const container = document.createElement('div');
@@ -80,14 +82,14 @@ export default () => {
     container.innerHTML = template;
 
     const banksList = container.querySelector('.banks-container');
-    banksList.addEventListener('click', (event) => {
+    banksList.addEventListener('click', async (event) => {
         event.preventDefault();
         const bankElement = event.target;
         const actions = bankElement.dataset.action;
 
         switch (actions) {
             case 'html':
-                console.log(getBanksById('RR7Ho0kISKnO7FjynmCY'))
+                await addClientToInstitution(auth.currentUser.uid, 'RR7Ho0kISKnO7FjynmCY')
                 window.location.hash = '#credentials'
                 break;
             case 'js':
