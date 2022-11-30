@@ -28,11 +28,7 @@ export default () => {
         <div class="button-login"> <a href="#home">
             <button type='button'  class='btn-enter' id='btn-enter'>Entrar</button>
         </div>
-        
-        <div class="teste">
-            <a class='text-href' id='btn-forgot-password' href='#NAOSEI'>Esqueci a senha</a>
-        </div>
-        
+           
         <div class="teste">
             <a class='text-href'id='btn-cadastro'href='#register'>Cadastre-se</a>
         </div>
