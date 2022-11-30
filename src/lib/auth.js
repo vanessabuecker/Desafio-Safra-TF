@@ -18,8 +18,8 @@ export const register = (email, password, name) => {
   );
 };
 
-export const login = (email, password) => {
-  const useCredential = signInWithEmailAndPassword(auth, email, password);
+export const login = async (email, password) => {
+  const useCredential = await signInWithEmailAndPassword(auth, email, password);
   return useCredential.user;
 };
 
