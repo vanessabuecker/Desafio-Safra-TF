@@ -1,5 +1,6 @@
-// import { getAllBanks } from '../../lib/firestore.js';
+import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
+import { auth } from '../../lib/config_firebase.js';
 
 export default () => {
 
@@ -141,10 +142,12 @@ export default () => {
     const modalContentElement = document.getElementById('modal_content');
     const modalElement = document.getElementById('modal');
     modalElement.classList.add('show-modal');
+
     modalContentElement.innerHTML = `
-    <div class="container-ext">
-    <div class="inst-name">Extrato</div>
-    <div class="box-ext">
+            <div class="container-ext">
+            <div class="inst-name">Extrato</div>
+        <div class="box-ext">
+
         <label for="period">Selecionar período:</label>
         <select name="month" id="month" form="monform">
             <option value="jan-fev">Janeiro - Fevereiro</option>
@@ -154,6 +157,7 @@ export default () => {
             <option value="sep-oct">Setembro - Outubro</option>
             <option value="nov-dec">Novembro - Dezembro</option>
         </select>
+        
         <div class="ext">
            <li> Invest.Css Resgate Autom. </li>
            <li class="ext-item-cred"> 100,00</li>
@@ -182,8 +186,8 @@ export default () => {
       window.location.hash = '';
     });
   });
-
-  let imageMove = container.querySelector('.container-bank');
+  
+   let imageMove = container.querySelector('.container-bank');
   window.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
       imageMove.scrollLeft += 100;
@@ -193,29 +197,39 @@ export default () => {
   });
 
   const showBanks = async () => {
+
     const allBanks = await getAllBanks();
     const banksTemplate = allBanks.map((bank) => {
+      let banks = "";
 
-      const banks = `
+      if (bank.cliente.includes(auth.currentUser.uid) === true) {
+        banks = `
         <div class="bank-card">
-  <div class="imgs">
+          <span class="account-type"> ${bank.instituicao}</span>
           <div class="logo-bank">
-              <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-              <span class="account-type"> ${bank.tipo}</span>
+            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+            
+            <span class="account-type"> ${bank.tipo}</span>
           </div>
-
+  
           <div class="balance-tamplate">
-              <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
-                  src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+            <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
           </div>
-  </div>
-      </div>`
-        ;
-      return banks;
+        </div>`;
+
+
+        return banks;
+
+       }else{
+        //  banks.style.display = "none";
+         console.log("oi")
+       }
 
     }).join('');
 
     container.querySelector('.container-bank').innerHTML += banksTemplate;
+
   }
 
   showBanks();
@@ -223,31 +237,7 @@ export default () => {
   return container;
 }
 
-const showBanks = async () => {
-  const allBanks = await getAllBanks();
-  const banksTemplate = allBanks.map((bank) => {
 
-    const banks = `
-    <div class="bank-card">
-      <div class="logo-bank">
-          <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-          <span class="account-type"> ${bank.tipo}</span>
-      </div>
-
-      <div class="balance-tamplate">
-          <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
-              src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-      </div>
-  </div>`
-      ;
-    return banks;
-
-  }).join('');
-
-  container.querySelector('.container-bank').innerHTML += banksTemplate;
-}
-
-showBanks();
 
 
 
