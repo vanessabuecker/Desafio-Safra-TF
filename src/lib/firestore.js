@@ -46,6 +46,7 @@ export const getAllBanks = async () => {
   }
 };
 
+
 export const createCollectionDataUser = async (email, cpf, saldo) => {
   try {
     const docRef = await addDoc(collection(db, 'Dados'), {
@@ -65,3 +66,4 @@ export const addClientToInstitution = async (clientId, bankId) => {
     cliente: arrayUnion(clientId)
   });
 }
+

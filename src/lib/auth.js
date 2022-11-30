@@ -18,11 +18,9 @@ export const register = (email, password, name) => {
   );
 };
 
-export function login() {
-  signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-    window.location.hash = "#home";
-    const user = userCredential.user;
-  });
-}
+export const login = (email, password) => {
+  const useCredential = signInWithEmailAndPassword(auth, email, password);
+  return useCredential.user;
+};
 
 export const logout = () => getAuth(app).signOut(auth);
