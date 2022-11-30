@@ -4,7 +4,7 @@ import register from './pages/register/app.js';
 import new_bank from './pages/new_bank/app.js';
 import openFinance from './pages/openFinance/app.js';
 import addNewBank from './pages/selectBank/app.js';
-import selectMorebank from './pages/selectMorebank/app.js';
+// import selectMorebank from './pages/selectMorebank/app.js';
 
 
 
@@ -41,12 +41,7 @@ const init = () => {
     case '#new_bank':
       main.innerHTML = '';
       main.appendChild(new_bank());
-      break;
-    case '#home':
-      main.innerHTML = '';
-      main.appendChild(home());
-      break;
-    
+      break;  
       
 
     default: main.appendChild(login());
