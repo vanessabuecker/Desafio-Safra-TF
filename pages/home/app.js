@@ -1,5 +1,6 @@
-// import { getAllBanks } from '../../lib/firestore.js';
+import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
+import { auth } from '../../lib/config_firebase.js';
 
 export default () => {
 
@@ -91,10 +92,10 @@ export default () => {
   showExt.addEventListener('click', (e) => {
     e.preventDefault();
     const modalContentElement = document.getElementById('modal_content');
-            const modalElement = document.getElementById('modal');
-            modalElement.classList.add('show-modal');
+    const modalElement = document.getElementById('modal');
+    modalElement.classList.add('show-modal');
 
-            modalContentElement.innerHTML = `
+    modalContentElement.innerHTML = `
             <div class="container-ext">
             <div class="inst-name">Extrato</div>
         <div class="box-ext">
@@ -121,8 +122,8 @@ export default () => {
 
   const spanClose = document.querySelector('#close');
   function hideModal() {
-      const modalElement = document.getElementById('modal');
-      modalElement.classList.remove('show-modal');
+    const modalElement = document.getElementById('modal');
+    modalElement.classList.remove('show-modal');
   }
 
   spanClose.addEventListener('click', hideModal);
@@ -135,8 +136,46 @@ export default () => {
     });
   });
 
+
+
+  const showBanks = async () => {
+
+    const allBanks = await getAllBanks();
+    const banksTemplate = allBanks.map((bank) => {
+      let banks = "";
+
+      if (bank.cliente.includes(auth.currentUser.uid) === true) {
+        banks = `
+        <div class="bank-card">
+          <span class="account-type"> ${bank.instituicao}</span>
+          <div class="logo-bank">
+            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+            
+            <span class="account-type"> ${bank.tipo}</span>
+          </div>
   
-  
+          <div class="balance-tamplate">
+            <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+          </div>
+        </div>`;
+
+
+        return banks;
+
+       }else{
+        //  banks.style.display = "none";
+         console.log("oi")
+       }
+
+    }).join('');
+
+    container.querySelector('.container-bank').innerHTML += banksTemplate;
+
+  }
+
+  showBanks();
+
   return container;
 }
 
@@ -144,31 +183,11 @@ export default () => {
 
 
 
-  const showBanks = async () => {
-  const allBanks = await getAllBanks();
-  const banksTemplate = allBanks.map((bank) => {
 
-    const banks = `
-    <div class="bank-card">
-      <div class="logo-bank">
-          <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-          <span class="account-type"> ${bank.tipo}</span>
-      </div>
 
-      <div class="balance-tamplate">
-          <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
-              src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-      </div>
-  </div>`
-      ;
-    return banks;
 
-  }).join('');
 
-  container.querySelector('.container-bank').innerHTML += banksTemplate;
-}
 
-showBanks();
 
 
 
