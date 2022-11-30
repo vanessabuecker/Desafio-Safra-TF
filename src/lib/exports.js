@@ -9,6 +9,9 @@ export {
     addDoc,
     getDoc,
     doc,
+    updateDoc,
+    arrayUnion,
+  
 } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
 
 export {

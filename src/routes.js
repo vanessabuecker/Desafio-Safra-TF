@@ -3,10 +3,11 @@ import home from './pages/home/app.js';
 import register from './pages/register/app.js';
 import openFinance from './pages/openFinance/app.js';
 import addNewBank from './pages/selectBank/app.js';
-import selectMorebank from './pages/selectMorebank/app.js';
 import selectApp from './pages/selectApp/app.js';
+import selectMorebank from './pages/selectMoreBank/app.js';
 import selectMoreApp from './pages/selectMoreApp/app.js';
 import credentials from './pages/credentials/app.js';
+
 
 const main = document.querySelector('.root');
 
@@ -20,7 +21,6 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(register());
       break;
-
       case '#home':
         main.innerHTML = '';
         main.appendChild(home());
@@ -40,14 +40,6 @@ const init = () => {
       case '#selectApp':
         main.innerHTML = '';
         main.appendChild(selectApp());
-      break;
-      case '#selectMoreApp':
-        main.innerHTML = '';
-        main.appendChild(selectMoreApp());
-      break;
-    case '#new_bank':
-      main.innerHTML = '';
-      main.appendChild(new_bank());
       break;
     case '#openFinance':
       main.innerHTML = '';
