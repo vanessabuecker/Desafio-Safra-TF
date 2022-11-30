@@ -1,8 +1,12 @@
+import { getBanksById } from '../../lib/firestore.js';
+import { addClientToInstitution } from '../../lib/firestore.js';
+import { auth } from '../../lib/config_firebase.js';
+
 export default () => {
     const container = document.createElement('div');
     const template = `      
      <div class="container-selectBank">
-        <div class="retangle-selectBank"> 
+        <div class="retshowBanks();angle-selectBank"> 
           <img id="logo-safra-selectBank" src="./img/logo-home.png" alt="Logo Safra">
           <p class="user-name">Olá, </p>
         </div>
@@ -17,14 +21,14 @@ export default () => {
         <div class="banks-container">
         <div class="box-banks"> 
         <div class="app-item-one">
-            <a href="#credentials">
-            <img class="icon-bank" src="./img/icon-html.png">
-            </a>
+            
+            <img data-action="html" class="icon-bank" src="./img/icon-html.png">
+            
         <p>HTML Bank</p>
         </div>
         <div class="app-item-two">
             <a href="#credentials">
-            <img class="icon-bank" src="./img/icon-java-script.png">
+            <img data-action="js" class="icon-bank" src="./img/icon-java-script.png">
             </a>
             <p>JS Bank</p>
         </div>
@@ -76,6 +80,26 @@ export default () => {
   `;
 
     container.innerHTML = template;
+
+    const banksList = container.querySelector('.banks-container');
+    banksList.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const bankElement = event.target;
+        const actions = bankElement.dataset.action;
+
+        switch (actions) {
+            case 'html':
+                await addClientToInstitution(auth.currentUser.uid, 'RR7Ho0kISKnO7FjynmCY')
+                window.location.hash = '#credentials'
+                break;
+            case 'js':
+                console.log(getBanksById('JHm8UToVaQRnqprXpzjA'))
+                window.location.hash = '#credentials'
+                break;
+            default:
+                console.log();
+        }
+    });
 
     return container;
 };
