@@ -43,16 +43,3 @@ export const getAllBanks = async () => {
   }
 };
 
-export const createCollectionDataUser = async (email, cpf, saldo) => {
-  try {
-    const docRef = await addDoc(collection(db, 'Dados'), {
-      email,
-      cpf,
-      saldo,
-    });
-    return docRef.id;
-  } catch (error) {
-    return error;
-  }
-};
-
