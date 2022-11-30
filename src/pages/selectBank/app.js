@@ -1,6 +1,7 @@
 import { getBanksById } from '../../lib/firestore.js';
 import { addClientToInstitution } from '../../lib/firestore.js';
 import { auth } from '../../lib/config_firebase.js';
+import { logout } from '../../lib/auth.js';
 
 export default () => {
     const container = document.createElement('div');
@@ -12,8 +13,8 @@ export default () => {
         </div>
 
         <div class="title-container">
-            <a href="#addOpenFinance">
-            <img class="arrow-icon-selectBank" src="./img/arrow.png" alt="Ícone - seta para a esquerda">
+            <a href="#openFinance">
+                <img id="arrow-icon" src="../src/img/arrow.png" alt="Ícone - seta para a esquerda">
             </a>
             <p class="title-text"> Selecione o Banco</p> 
         </div>
@@ -81,6 +82,9 @@ export default () => {
 
     container.innerHTML = template;
 
+    container.innerHTML = template;
+    const btnLogout = container.querySelector('#icon-logout');
+
     const banksList = container.querySelector('.banks-container');
     banksList.addEventListener('click', async (event) => {
         event.preventDefault();
@@ -100,6 +104,14 @@ export default () => {
                 console.log();
         }
     });
+
+    btnLogout.addEventListener('click', (e) => {
+        const main = document.querySelector('#root');
+        e.preventDefault();
+        logout().then(() => {
+          window.location.hash = '';
+        });
+      });
 
     return container;
 };
