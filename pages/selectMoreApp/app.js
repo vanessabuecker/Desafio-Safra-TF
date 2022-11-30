@@ -1,3 +1,5 @@
+import { logout } from '../../lib/auth.js';
+
 export default () => {
     const container = document.createElement('div');
     const template = `      
@@ -64,6 +66,22 @@ export default () => {
   `;
 
     container.innerHTML = template;
+
+    const btnLogout = container.querySelector('#icon-logout');
+
+    btnLogout.addEventListener('click', (e) => {
+        const main = document.querySelector('#root');
+        e.preventDefault();
+        logout().then(() => {
+          window.location.hash = '';
+        });
+      });
+
+    const btnHome = container.querySelector('#icon-home');
+
+    btnHome.addEventListener('click', () => {
+        window.location.hash = '#home';
+      });
 
     return container;
 };
