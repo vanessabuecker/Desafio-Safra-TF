@@ -109,7 +109,8 @@ export default () => {
   
   </div>`;
 
-  /*const btnShow = container.querySelector('#btn-eyes');
+  /*tentativa1
+  const btnShow = container.querySelector('#btn-eyes');
   const balance = container.querySelector('.balance');
 
   btnShow.addEventListener('click', function() {
@@ -119,11 +120,12 @@ export default () => {
       balance.style.display = 'block';
     }
 
-  });*/
+  });
 
-  /*const btnShow = container.querySelector('#btn-eyes');
+  tentativa 2
+  const bttnShow = container.querySelector('#btn-eyes');
 
-  btnShow.addEventListener('click', function() {
+  bttnShow.addEventListener('click', function() {
     const balance = container.querySelector('.balance');
     balance.classList.toggle("hide");
 
