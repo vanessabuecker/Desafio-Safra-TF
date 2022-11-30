@@ -1,4 +1,4 @@
-import { getAllBanks } from '../../lib/firestore.js';
+// import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
 
 export default () => {
@@ -111,35 +111,40 @@ export default () => {
     });
   });
 
-  const showBanks = async () => {
-    const allBanks = await getAllBanks();
-    const banksTemplate = allBanks.map((bank) => {
-
-      const banks = `
-      <div class="bank-card">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> ${bank.tipo}</span>
-        </div>
   
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-    </div>`
-        ;
-      return banks;
-
-    }).join('');
-
-    container.querySelector('.container-bank').innerHTML += banksTemplate;
-  }
-
-  showBanks();
   
-
   return container;
 }
+
+
+
+
+
+//   const showBanks = async () => {
+//   const allBanks = await getAllBanks();
+//   const banksTemplate = allBanks.map((bank) => {
+
+//     const banks = `
+//     <div class="bank-card">
+//       <div class="logo-bank">
+//           <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+//           <span class="account-type"> ${bank.tipo}</span>
+//       </div>
+
+//       <div class="balance-tamplate">
+//           <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+//               src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+//       </div>
+//   </div>`
+//       ;
+//     return banks;
+
+//   }).join('');
+
+//   container.querySelector('.container-bank').innerHTML += banksTemplate;
+// }
+
+// showBanks();
 
 
 
