@@ -6,10 +6,6 @@ import openFinance from './pages/openFinance/app.js';
 import addNewBank from './pages/selectBank/app.js';
 import selectMorebank from './pages/selectMorebank/app.js';
 
-
-
-
-
 const main = document.querySelector('.root');
 
 const init = () => {

@@ -165,10 +165,12 @@ body {
     justify-items: center;
 }
 
-#icon-home, #icon-pix, #icon-logout{
-   width: 30px; 
-   height: 30px;
-   cursor: pointer;
+#icon-home,
+#icon-pix,
+#icon-logout {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 #icon-ob-add {
