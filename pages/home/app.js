@@ -37,6 +37,19 @@ export default () => {
   
         <div class="container-bank">
             
+        <div class="bank-card">
+        <div class="imgs">
+                <div class="logo-bank">
+                    <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+                    <span class="account-type"> Bancos </span>
+                </div>
+      
+                <div class="balance-tamplate">
+                    <span class="totalValue" id="total-value-template"> Bancos </span> <img class="icon-eyes-template"
+                        src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+                </div>
+        </div>
+            </div>
         </div>
   
         <div class="pendencies">
@@ -54,16 +67,51 @@ export default () => {
     <div class="retangle-bottom-home">
         <div class="content-bottom-retangle">
 
-            <a href="#home"><img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME" style="width:35px;height:35px;"></a>
-            <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
-            <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
-  
-        </div>
-    </div>
+           <p class="txt-balance">Lançamentos futuros</p>
+           <div class="balance">
+                <span class="totalValue"> R$...</span> <img class="icon-eyes" src="./img/eyes-outline-icon.png"
+                    alt="Ícone olhos abertos">                    
+           </div> 
+            
+            <div class="txt-balance" id="showExt">
+            <img id="ext-bank" src="./img/folha.png"
+                    alt="Ícone open banking cor-de-rosa">
+           <div> Vizualizar extrato</div>
+           </div>
+       </div>
+       <div class="button-openbanking-add">
+           <a href="#openFinance"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
+                   alt="Ícone open banking cor-de-rosa"> </a> Adicionar Open Finance
+       </div>
+       
+        <div class="container-bank">  </div>
+
+       <div class="pendencies">
+           <span class="pendencies-title"> Pendências <img class="icon-caution" src="./img/caution-icon.png" alt="Ícone de precaução">
+           </span>
+       </div>
+       
+       <div class="pendencies-list">
+            <img class="icon-caution" src="./img/ReactBank.png"
+               alt="Ícone de precaução"> <span id="item-list"> Cartão</span>  <span id="balance-pend"> R$3.560,00</span>
+       </div>
+       <div class="wrapper">  </div>
+   </div>
+
+   <div class="retangle-bottom-home">
+       <div class="content-bottom-retangle">
+
+           <a href="#home"><img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME" style="width:35px;height:35px;"></a>
+           <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
+           <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
+
+       </div>
+   </div>
   
   </div>`;
 
-  /*const btnShow = container.querySelector('#btn-eyes');
+  /*tentativa1
+  const btnShow = container.querySelector('#btn-eyes');
   const balance = container.querySelector('.balance');
 
   btnShow.addEventListener('click', function() {
@@ -73,11 +121,12 @@ export default () => {
       balance.style.display = 'block';
     }
 
-  });*/
+  });
 
-  /*const btnShow = container.querySelector('#btn-eyes');
+  tentativa 2
+  const bttnShow = container.querySelector('#btn-eyes');
 
-  btnShow.addEventListener('click', function() {
+  bttnShow.addEventListener('click', function() {
     const balance = container.querySelector('.balance');
     balance.classList.toggle("hide");
 
@@ -85,7 +134,6 @@ export default () => {
 
   container.innerHTML = template;
   const btnLogout = container.querySelector('#icon-logout');
-
   const btn = container.querySelector('#icon-home');
   const showExt = container.querySelector('#showExt');
 
@@ -99,25 +147,28 @@ export default () => {
             <div class="container-ext">
             <div class="inst-name">Extrato</div>
         <div class="box-ext">
-        <label for="period">Selecionar período:</label>
-    <select name="month" id="month" form="monform">
-      <option value="jan-fev">Janeiro - Fevereiro</option>
-      <option value="marc-apr">Março - Abril</option>
-      <option value="may-jun">Maio - Junho</option>
-      <option value="jul-aug">Julho - Agosto</option>
-      <option value="sep-oct">Setembro - Outubro</option>
-      <option value="nov-dec">Novembro - Dezembro</option>
-    </select>
-            <div class="ext"> 
-            <li>Água: - 100,00</li>
-            <li>Energia: -450,00</li>
-            <li>Internet: -100,00</li>
-            <li>Pensão alim.: 800,00</li>
-            
-            </div>
-        </div>
 
-    </div>`;
+        <label for="period">Selecionar período:</label>
+        <select name="month" id="month" form="monform">
+            <option value="jan-fev">Janeiro - Fevereiro</option>
+            <option value="marc-apr">Março - Abril</option>
+            <option value="may-jun">Maio - Junho</option>
+            <option value="jul-aug">Julho - Agosto</option>
+            <option value="sep-oct">Setembro - Outubro</option>
+            <option value="nov-dec">Novembro - Dezembro</option>
+        </select>
+        
+        <div class="ext">
+           <li> Invest.Css Resgate Autom. </li>
+           <li class="ext-item-cred"> 100,00</li>
+       </div>
+
+       <div class="ext">
+           <li> Conta com cartão PADARIA NODE </li>
+           <li class="ext-item-deb"> -100,00</li>
+        </div>
+    </div>
+          </div>`;
   })
 
   const spanClose = document.querySelector('#close');
@@ -135,8 +186,15 @@ export default () => {
       window.location.hash = '';
     });
   });
+  
+   let imageMove = container.querySelector('.container-bank');
+  window.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+      imageMove.scrollLeft += 100;
+    }
 
-
+    else imageMove.scrollLeft -= 100;
+  });
 
   const showBanks = async () => {
 
@@ -178,14 +236,6 @@ export default () => {
 
   return container;
 }
-
-
-
-
-
-
-
-
 
 
 
