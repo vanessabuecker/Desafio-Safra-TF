@@ -93,7 +93,7 @@ export default () => {
                 window.location.hash = '#credentials'
                 break;
             case 'js':
-                console.log(getBanksById('JHm8UToVaQRnqprXpzjA'))
+                await addClientToInstitution(auth.currentUser.uid, 'JHm8UToVaQRnqprXpzjA')
                 window.location.hash = '#credentials'
                 break;
             default:
