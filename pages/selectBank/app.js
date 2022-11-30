@@ -1,4 +1,3 @@
-import { getBanksById } from '../../lib/firestore.js';
 import { addClientToInstitution } from '../../lib/firestore.js';
 import { auth } from '../../lib/config_firebase.js';
 
