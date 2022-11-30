@@ -57,7 +57,11 @@ body {
 
 .teste {
     text-align: center;
+    font-size: 0.9rem;
+    color: #00003C;
+    text-decoration: none;
 }
+
 .text-inputs{
     color: #00003C;
     width: 100%;
