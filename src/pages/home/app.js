@@ -149,7 +149,6 @@ export default () => {
 
     showBanks();
 
-
   return container;
 }
 
