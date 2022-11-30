@@ -66,4 +66,3 @@ export const addClientToInstitution = async (clientId, bankId) => {
     cliente: arrayUnion(clientId)
   });
 }
-
