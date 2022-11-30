@@ -5,186 +5,58 @@ export default () => {
 
   const container = document.createElement('div');
   const template = `   <div class="container-homepg">
-    <div class="retangle-home">
-        <div class="logo-home">
-            <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
-                Fulano!</span>
-        </div>
-        <div class="total-balance">
-            <p class="txt-balance">Saldo disponível</p>
-            <div class="balance">
+   <div class="retangle-home">
+       <div class="logo-home">
+           <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
+               Fulano!</span>
+       </div>
+       <div class="total-balance">
+           <p class="txt-balance">Saldo disponível</p>
+           <div class="balance">
                 <span class="totalValue"> R$15.300,00</span> <img class="icon-eyes" src="./img/eyes-off-icon.png"
                     alt="Ícone olhos fechados">
-            </div>
-  
-            <p class="txt-balance">Lançamentos futuros</p>
-            <div class="balance">
+           </div>
+
+           <p class="txt-balance">Lançamentos futuros</p>
+           <div class="balance">
                 <span class="totalValue"> R$...</span> <img class="icon-eyes" src="./img/eyes-outline-icon.png"
                     alt="Ícone olhos abertos">                    
-            </div>
+           </div> 
             
             <div class="txt-balance" id="showExt">
             <img id="ext-bank" src="./img/folha.png"
                     alt="Ícone open banking cor-de-rosa">
            <div> Vizualizar extrato</div>
-            </div>
-        </div>
-        <div class="button-openbanking-add">
-            <a href="#openFinance"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
-                    alt="Ícone open banking cor-de-rosa"> </a> Adicionar Open Finance
-        </div>
-        <div class="container-bank">    
-        
+           </div>
+       </div>
+       <div class="button-openbanking-add">
+           <a href="#openFinance"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
+                   alt="Ícone open banking cor-de-rosa"> </a> Adicionar Open Finance
+       </div>
+       
+        <div class="container-bank">  </div>
 
+       <div class="pendencies">
+           <span class="pendencies-title"> Pendências <img class="icon-caution" src="./img/caution-icon.png" alt="Ícone de precaução">
+           </span>
+       </div>
+       
+       <div class="pendencies-list">
+            <img class="icon-caution" src="./img/ReactBank.png"
+               alt="Ícone de precaução"> <span id="item-list"> Cartão</span>  <span id="balance-pend"> R$3.560,00</span>
+       </div>
+       <div class="wrapper">  </div>
+   </div>
 
+   <div class="retangle-bottom-home">
+       <div class="content-bottom-retangle">
 
-        <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente</span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
+           <a href="#home"><img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME" style="width:35px;height:35px;"></a>
+           <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
+           <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
 
-
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type">Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente</span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Corrente</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-    <div class="bank-card">
-<div class="imgs">
-        <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-            <span class="account-type"> Debito</span>
-        </div>
-  
-        <div class="balance-tamplate">
-            <span class="totalValue" id="total-value-template">Corrente </span> <img class="icon-eyes-template"
-                src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-        </div>
-</div>
-    </div>
-
-
-
-
-
-        </div>
-  
-        <div class="pendencies">
-            <span class="pendencies-title"> Pendências <img class="icon-caution" src="./img/caution-icon.png" alt="Ícone de precaução">
-            </span>
-        </div>
-        
-        <div class="pendencies-list">
-             <img class="icon-caution" src="./img/ReactBank.png"
-                alt="Ícone de precaução"> <span id="item-list"> Cartão</span>  <span id="balance-pend"> R$3.560,00</span>
-        </div>
-        <div class="wrapper">  </div>
-    </div>
-  
-    <div class="retangle-bottom-home">
-        <div class="content-bottom-retangle">
-
-            <a href="#home"><img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME" style="width:35px;height:35px;"></a>
-            <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
-            <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
-  
-        </div>
-    </div>
+       </div>
+   </div>
   
   </div>`;
 
@@ -199,19 +71,19 @@ export default () => {
     const modalElement = document.getElementById('modal');
     modalElement.classList.add('show-modal');
     modalContentElement.innerHTML = `
-   <div class="container-ext">
-   <div class="inst-name">Extrato</div>
-   <div class="box-ext">
-       <label for="period">Selecionar período:</label>
-       <select name="month" id="month" form="monform">
-           <option value="jan-fev">Janeiro - Fevereiro</option>
-           <option value="marc-apr">Março - Abril</option>
-           <option value="may-jun">Maio - Junho</option>
-           <option value="jul-aug">Julho - Agosto</option>
-           <option value="sep-oct">Setembro - Outubro</option>
-           <option value="nov-dec">Novembro - Dezembro</option>
-       </select>
-       <div class="ext">
+    <div class="container-ext">
+    <div class="inst-name">Extrato</div>
+    <div class="box-ext">
+        <label for="period">Selecionar período:</label>
+        <select name="month" id="month" form="monform">
+            <option value="jan-fev">Janeiro - Fevereiro</option>
+            <option value="marc-apr">Março - Abril</option>
+            <option value="may-jun">Maio - Junho</option>
+            <option value="jul-aug">Julho - Agosto</option>
+            <option value="sep-oct">Setembro - Outubro</option>
+            <option value="nov-dec">Novembro - Dezembro</option>
+        </select>
+        <div class="ext">
            <li> Invest.Css Resgate Autom. </li>
            <li class="ext-item-cred"> 100,00</li>
        </div>
@@ -219,9 +91,9 @@ export default () => {
        <div class="ext">
            <li> Conta com cartão PADARIA NODE </li>
            <li class="ext-item-deb"> -100,00</li>
-       </div>
-   </div>
-        </div>`;
+        </div>
+    </div>
+          </div>`;
   })
 
   const spanClose = document.querySelector('#close');
@@ -245,37 +117,37 @@ export default () => {
     if (e.deltaY > 0) {
       imageMove.scrollLeft += 100;
     }
-    
+
     else imageMove.scrollLeft -= 100;
   });
 
-//   const showBanks = async () => {
-//     const allBanks = await getAllBanks();
-//     const banksTemplate = allBanks.map((bank) => {
+    const showBanks = async () => {
+      const allBanks = await getAllBanks();
+      const banksTemplate = allBanks.map((bank) => {
 
-//       const banks = `
-//       <div class="bank-card">
-// <div class="imgs">
-//         <div class="logo-bank">
-//             <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
-//             <span class="account-type"> ${bank.tipo}</span>
-//         </div>
-  
-//         <div class="balance-tamplate">
-//             <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
-//                 src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
-//         </div>
-// </div>
-//     </div>`
-//         ;
-//       return banks;
+        const banks = `
+        <div class="bank-card">
+  <div class="imgs">
+          <div class="logo-bank">
+              <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+              <span class="account-type"> ${bank.tipo}</span>
+          </div>
 
-//     }).join('');
+          <div class="balance-tamplate">
+              <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+                  src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+          </div>
+  </div>
+      </div>`
+          ;
+        return banks;
 
-//     container.querySelector('.container-bank').innerHTML += banksTemplate;
-//   }
+      }).join('');
 
-//   showBanks();
+      container.querySelector('.container-bank').innerHTML += banksTemplate;
+    }
+
+    showBanks();
 
 
   return container;
