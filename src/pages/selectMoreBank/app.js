@@ -1,7 +1,7 @@
 export default () => {
     const container = document.createElement('div');
     const template = `      
-     <div class="container-selectBank">
+     <div class="container-selectMoreBank">
         <div class="retangle-selectBank"> 
           <img id="logo-safra-selectBank" src="./img/logo-home.png" alt="Logo Safra">
           <p class="user-name">Olá, </p>
