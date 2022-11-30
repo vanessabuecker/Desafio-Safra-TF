@@ -42,12 +42,6 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(new_bank());
       break;
-    case '#home':
-      main.innerHTML = '';
-      main.appendChild(home());
-      break;
-    
-      
 
     default: main.appendChild(login());
   }
