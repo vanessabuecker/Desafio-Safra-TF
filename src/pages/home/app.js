@@ -1,10 +1,11 @@
-import { getAllBanks } from '../../lib/firestore.js';
+// import { getAllBanks } from '../../lib/firestore.js';
 import { logout } from '../../lib/auth.js';
 
 export default () => {
 
   const container = document.createElement('div');
   const template = `   <div class="container-homepg">
+<<<<<<< HEAD
    <div class="retangle-home">
        <div class="logo-home">
            <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
@@ -16,6 +17,55 @@ export default () => {
                 <span class="totalValue"> R$15.300,00</span> <img class="icon-eyes" src="./img/eyes-off-icon.png"
                     alt="Ícone olhos fechados">
            </div>
+=======
+    <div class="retangle-home">
+        <div class="logo-home">
+            <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
+                Fulano!</span>
+        </div>
+        <div class="total-balance">
+            <p class="txt-balance">Saldo disponível</p>
+            <div class="balance">
+                <span class="totalValue"> R$15.300,00</span> 
+            </div> 
+            <div>
+                <img id='btn-eyes' class='icon-eyes' alt='Ícone de olhos para mostrar/ocultar' src="./img/eyes-outline-icon.png">
+            </div>
+  
+            <p class="txt-balance">Lançamentos futuros</p>
+            <div class="balance">
+                <span class="totalValue"> R$...</span> 
+            </div> 
+            <div>
+                <img id='btn-eyes' class='icon-eyes' alt='Ícone de olhos para mostrar/ocultar' src="./img/eyes-outline-icon.png">    
+            </div>
+
+            <div class="txt-balance" id="showExt" >Vizualizar extrato</div>
+        </div>
+        <div class="button-openbanking-add">
+            <a href="#openFinance"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
+                    alt="Ícone open banking cor-de-rosa"> </a> Adicionar Open Finance
+        </div>
+  
+        <div class="container-bank">
+            
+        </div>
+  
+        <div class="pendencies">
+            <span class="pendencies-title"> Pendências <img class="icon-caution" src="./img/caution-icon.png" alt="Ícone de precaução">
+            </span>
+        </div>
+        
+        <div class="pendencies-list">
+             <img class="icon-caution" src="./img/ReactBank.png"
+                alt="Ícone de precaução"> <span id="item-list"> Cartão</span>  <span id="balance-pend"> R$3.560,00</span>
+        </div>
+        <div class="wrapper">  </div>
+    </div>
+  
+    <div class="retangle-bottom-home">
+        <div class="content-bottom-retangle">
+>>>>>>> 011605b4d2a981582a8ece07d07e484d58f36947
 
            <p class="txt-balance">Lançamentos futuros</p>
            <div class="balance">
@@ -59,6 +109,26 @@ export default () => {
    </div>
   
   </div>`;
+
+  /*const btnShow = container.querySelector('#btn-eyes');
+  const balance = container.querySelector('.balance');
+
+  btnShow.addEventListener('click', function() {
+    if (balance.style.display === 'block') {
+      balance.style.display = 'none';
+    } else{
+      balance.style.display = 'block';
+    }
+
+  });*/
+
+  /*const btnShow = container.querySelector('#btn-eyes');
+
+  btnShow.addEventListener('click', function() {
+    const balance = container.querySelector('.balance');
+    balance.classList.toggle("hide");
+
+  });*/
 
   container.innerHTML = template;
   const btnLogout = container.querySelector('#icon-logout');
@@ -112,6 +182,7 @@ export default () => {
     });
   });
 
+<<<<<<< HEAD
   let imageMove = container.querySelector('.container-bank');
   window.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
@@ -149,8 +220,42 @@ export default () => {
 
     showBanks();
 
+=======
+  
+  
+>>>>>>> 011605b4d2a981582a8ece07d07e484d58f36947
   return container;
 }
+
+
+
+
+
+  const showBanks = async () => {
+  const allBanks = await getAllBanks();
+  const banksTemplate = allBanks.map((bank) => {
+
+    const banks = `
+    <div class="bank-card">
+      <div class="logo-bank">
+          <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+          <span class="account-type"> ${bank.tipo}</span>
+      </div>
+
+      <div class="balance-tamplate">
+          <span class="totalValue" id="total-value-template">${bank.saldo} </span> <img class="icon-eyes-template"
+              src="./img/eyes-off-icon.png" alt="Ícone olhos abertos">
+      </div>
+  </div>`
+      ;
+    return banks;
+
+  }).join('');
+
+  container.querySelector('.container-bank').innerHTML += banksTemplate;
+}
+
+showBanks();
 
 
 

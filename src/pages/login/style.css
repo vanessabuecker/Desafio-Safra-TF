@@ -76,6 +76,13 @@ body {
     text-decoration: none;
 }
 
+.div-error{
+    color: red;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+}
+
 @media only screen and (max-width: 845px) and (min-width: 389px) {
 
     .container-login {
