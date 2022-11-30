@@ -6,7 +6,6 @@ import addNewBank from './pages/selectBank/app.js';
 import selectMorebank from './pages/selectMorebank/app.js';
 import selectApp from './pages/selectApp/app.js';
 import selectMoreApp from './pages/selectMoreApp/app.js';
-import selectMorebank from './pages/selectMoreBank/app.js';
 import credentials from './pages/credentials/app.js';
 
 const main = document.querySelector('.root');

@@ -1,7 +1,7 @@
 export default () => {
     const container = document.createElement('div');
     const template = `      
-     <div class="container-selectMoreBank">
+     <div class="container-selectBank">
         <div class="retangle-selectBank"> 
           <img id="logo-safra-selectBank" src="./img/logo-home.png" alt="Logo Safra">
           <p class="user-name">Olá, </p>
@@ -58,8 +58,6 @@ export default () => {
             <img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME">
             <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
             <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
-        </div>
-        </div>
         </div>
   `;
 

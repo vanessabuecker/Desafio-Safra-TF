@@ -66,7 +66,8 @@ body {
 }
 
 .txt-balance {
-    color: red;
+    color: #F54868;
+    cursor: pointer;
 }
 
 .totalValue {
@@ -80,7 +81,12 @@ body {
     justify-items: center;
     align-items: center;
     margin-bottom: 2%;
+    /*display: none;*/
 }
+
+/*.hide {
+    visibility: hidden;
+}*/
 
 .button-openbanking-add {
     display: flex;
@@ -153,6 +159,7 @@ body {
 
 .icon-eyes {
     width: 5%;
+    cursor: pointer;
 }
 
 .icon-eyes-template {
@@ -218,7 +225,7 @@ body {
 
     .total-balance {
         width: 90%;
-        height: 24vh;
+        height: 30vh;
         padding: 5%;
     }
 
