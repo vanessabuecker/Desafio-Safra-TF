@@ -53,6 +53,10 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(selectMorebank());
       break;
+    case '#selectMoreApp':
+      main.innerHTML = '';
+      main.appendChild(selectMoreApp());
+      break;  
     case '#credentials':
       main.innerHTML = '';
       main.appendChild(credentials());

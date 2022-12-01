@@ -20,7 +20,7 @@ body {
 .retangle-home {
     background-color: #00003C;
     position: absolute;
-    height: 18%;
+    height: 15%;
     left: 0;
     right: 0;
 }
@@ -52,10 +52,9 @@ body {
 }
 
 .content-bottom-retangle {
-    height: 10vh;
+    height: auto;
     display: flex;
-    justify-content: space-around;
-    padding: 1%;
+    justify-content: space-around;  
 }
 
 .total-balance {
@@ -75,7 +74,6 @@ body {
 
 .totalValue {
     font-size: 1.8rem;
-    padding: 2%;
 }
 
 .balance {
@@ -84,7 +82,6 @@ body {
     justify-items: center;
     align-items: center;
     margin-bottom: 2%;
-    /*display: none;*/
 }
 
 #showExt {
@@ -123,11 +120,11 @@ body {
 }
 
 .bank-card {
-    width: 90%;
+    width: 17vw;
     height: 100%;
     border: 2px solid black;
     border-radius: 5px;
-    transform: rotate(360deg);
+    padding: 2%;
 }
 
 .container-bank::-webkit-scrollbar {
@@ -142,7 +139,8 @@ body {
     text-align: center;
     padding: 2px;
     margin-bottom: 5px;
-    font-size: 1.2rem;
+    color: #00003C;
+    font-size: 1.3rem;
 }
 
 #total-value-template {
@@ -151,8 +149,7 @@ body {
 }
 
 .logo-bank {
-    display: flex;
-    width: 100%;
+    display: block;
     justify-content: space-between;
 }
 
@@ -161,25 +158,35 @@ body {
 }
 
 #logo-alfa {
-    width: 8vh;
-    height: 8vh;
+    width: 5vh;
+    height: 5vh;
     border-radius: 5px;
     justify-items: center;
 }
 
-#icon-home, #icon-pix, #icon-logout{
-   width: 30px; 
-   height: 30px;
-   cursor: pointer;
+#icon-home {
+    width: 2.2vw;
+    cursor: pointer;
+}
+
+#icon-logout {
+    width: 2vw;
+    cursor: pointer;
 }
 
 #icon-ob-add {
     height: 5vh;
 }
 
-.icon-eyes {
-    width: 5%;
+#btn-eyes {
+    width: 3vw;
+    align-content: space-around;
     cursor: pointer;
+}
+
+#icon-sino {
+    width: 2vw;
+    height: 4.7vh;
 }
 
 .icon-eyes-template {
@@ -232,7 +239,7 @@ body {
 
 @media only screen and (max-width: 845px) and (min-width: 389px) {
     #logo-safra-home {
-        width: 35%;
+        width: 70%;
     }
 
     .retangle-home {
@@ -240,7 +247,7 @@ body {
     }
 
     .logo-home {
-        width: 100%;
+        width: 20vh;
     }
 
     .total-balance {
@@ -271,13 +278,22 @@ body {
         margin-bottom: 5px;
     }
 
-    #icon-pix,
-    #icon-home {
-        width: 30px;
+    #icon-sino {
+        height: 5vh;
+        width: 10vw;
     }
 
-    .icon-eyes {
-        width: 10%;
+    #icon-home {
+        width: 10vw;
+    }
+
+    #btn-eyes {
+        width: 8vw;
+    }
+
+    .bank-card {
+        width: 100%;
+        height: auto;
     }
 
     .icon-eyes-template {

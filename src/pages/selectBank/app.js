@@ -1,15 +1,17 @@
 import { addClientToInstitution } from '../../lib/firestore.js';
 import { auth } from '../../lib/config_firebase.js';
+import { logout } from '../../lib/auth.js';
 
 export default () => {
   const container = document.createElement('div');
   const template = `<div class="container-selectBank">
-    <div class="retshowBanks();angle-selectBank"> 
-      <img id="logo-safra-selectBank" src="./img/logo-home.png" alt="Logo Safra">
-      <p class="user-name">Olá, </p>
-    </div>
+    <div class="retangle-home">
+        <div class="logo-home">
+            <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
+                Sabrina!</span>
+        </div>
     <div class="title-container">
-      <a href="#addOpenFinance">
+      <a href="#openFinance">
         <img class="arrow-icon-selectBank" src="./img/arrow.png" alt="Ícone - seta para a esquerda">
       </a>
       <p class="title-text"> Selecione o Banco</p> 
@@ -51,8 +53,9 @@ export default () => {
         </div>
         <div class="retangle-bottom-home">
           <div class="content-bottom-retangle">
-            <img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME">
-            <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
+          <a href="#home">
+          <img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME">
+          </a> 
             <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
           </div>
         </div>
@@ -95,6 +98,16 @@ export default () => {
         console.log();
     }
   });
+
+  const btnLogout = container.querySelector('#icon-logout');
+
+    btnLogout.addEventListener('click', (e) => {
+      const main = document.querySelector('#root');
+      e.preventDefault();
+      logout().then(() => {
+        window.location.hash = '';
+      });
+    });
 
   return container;
 };

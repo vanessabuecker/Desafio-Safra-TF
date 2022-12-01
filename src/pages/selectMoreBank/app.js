@@ -58,7 +58,6 @@ export default () => {
         <div class="retangle-bottom-home">
         <div class="content-bottom-retangle">
             <img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME">
-            <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
             <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
         </div>
   `;

@@ -1,15 +1,15 @@
 ## Índice
 
-* [1. Talent Fest](#1-talent-fest)
-* [2. Safra](#2-safra)
-* [3. Desafio](#3-desafio)
-* [4. Historias do usuário](#4-historias-do-usuário)
-* [5. Interface do usuário](#5-interface-do-usuário)
-* [6. Planejamento](#6-planejamento)
-* [7. Code Reviews](#7-code-reviews)
-* [8. Firebase e Firestore](#8-firebase-e-firestore)
-* [9. Implementações Futuras](9-#implementações-futuras)
-* [10. Desenvolvedoras](#10-desenvolvedoras)
+- [1. Talent Fest](#1-talent-fest)
+- [2. Safra](#2-safra)
+- [3. Desafio](#3-desafio)
+- [4. Histórias do usuário](#4-histórias-do-usuário)
+- [5. Interface do Usuário](#5-interface-do-usuário)
+- [6. Planejamento](#6-planejamento)
+- [7. Code Reviews](#7-code-reviews)
+- [8. Firebase e Firestore](#8-firebase-e-firestore)
+- [9. Implementações Futuras](#9-implementações-futuras)
+- [10. Desenvolvedoras](#10-desenvolvedoras)
 
 # 1. Talent Fest
 
@@ -52,9 +52,8 @@ Protótipo de baixa fidelidade
 
 Protótipo de alta fidelidade / mobile first
 
-![Prototipo de alta 1](src/img/prototipoalta1.png) 
-![Prototipo de alta 2](src/img/prototipoalta2.png) 
-![Prototipo de alta 2](src/img/prototipoalta3.png)
+![Prototipo de alta 1](src/img/prototipoalta1.jpeg) 
+![Prototipo de alta 2](src/img/prototipoalta2.jpeg) 
 
 Paleta de cores
 A paleta de cores foi definida de acordo com as cores já usadas pelo banco Safra.

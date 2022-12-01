@@ -1,17 +1,28 @@
+import { logout } from "../../lib/auth.js";
+
 export default () => {
     const container = document.createElement('div');
     const template = `
           <div class="container-selectApp">
-              <div class="retangle-selectApp"> 
-                      <img id="logo-safra-selectApp" src="/src/img/logo-home.png" alt="Logo Safra">
-                      <p class="user-name">Olá, </p>
-              </div>
-              <div class="title-container">
-                  <a href="#addOpenFinance">
-                      <img class="arrow-icon" src="/src/img/arrow.png" alt="Ícone - seta para a esquerda">
-                  </a>
-                  <p class="title-text"> Selecione o App</p> 
-              </div>
+          <div class="retangle-home">
+          <div class="logo-home">
+              <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
+                  Sabrina!</span>
+          </div>
+          <div class="instruction-title">
+        <a href="#openFinance"><img id="arrow-icon" src="../img/arrow.png" alt="Ícone - seta para a esquerda"/></a>
+      </div>
+      <div id="form-credentials">
+        <p class="titles">Inserir Credenciais</p>
+      </div>  
+
+            <div class="instruction-title">
+            <a href="#openFinance">
+                <img class="arrow-icon-selectBank" src="./img/arrow.png" alt="Ícone - seta para a esquerda">
+            </a>
+            <div id="form-credentials">
+                <p class="titles">Selecione banco</p>
+            </div> 
               <div class="apps-container">
               <div class="app-item-um">
               <a href="#credentials">
@@ -40,16 +51,28 @@ export default () => {
                       <p class="text-more"> Ver mais aplicativos</p>
                   </a>
               </div>
-              <div class="retangle-bottom-home">          
-                  <div class="content-bottom-retangle">
-                      <img id="icon-home" src="/src/img/icon-home.png" alt="Ícone HOME">
-                      <img id="icon-open-banking" src="/src/img/Vector.png" alt="Ícone Open Banking">
-                  </div>
-              </div>
+                     
+              <div class="retangle-bottom-home">
+              <div class="content-bottom-retangle">
+                <a href="#home">
+                  <img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME">
+                </a>  
+              <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
+            </div>
           </div>
       `;
   
     container.innerHTML = template;
+
+    const btnLogout = container.querySelector('#icon-logout');
+
+    btnLogout.addEventListener('click', (e) => {
+      const main = document.querySelector('#root');
+      e.preventDefault();
+      logout().then(() => {
+        window.location.hash = '';
+      });
+    });
   
     return container;
   };

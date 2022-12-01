@@ -9,7 +9,7 @@ export default () => {
     <div class="retangle-home">
         <div class="logo-home">
             <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
-                Fulano!</span>
+                Sabrina!</span>
         </div>
         <div class="total-balance">
             <p class="txt-balance">Saldo disponível</p>
@@ -32,7 +32,7 @@ export default () => {
         </div>
         <div class="button-openbanking-add">
             <a href="#openFinance"> <img id="icon-ob-add" src="./img/icon-open-banking.png"
-                    alt="Ícone open banking cor-de-rosa"> </a> Adicionar Open Finance
+                    alt="Ícone open banking cor-de-rosa"> Adicionar Open Finance </a> 
         </div>
   
         <div class="container-bank">
@@ -55,7 +55,6 @@ export default () => {
         <div class="content-bottom-retangle">
 
             <a href="#home"><img id="icon-home" src="./img/icon-home.png" alt="Ícone HOME" style="width:35px;height:35px;"></a>
-            <img id="icon-pix" src="./img/pix-icon.png" alt="Ícone Pix">
             <img id="icon-logout" src="./img/logout-icon.png" alt="Ícone de logout">
   
         </div>
@@ -63,7 +62,11 @@ export default () => {
   
   </div>`;
 
-  /*const btnShow = container.querySelector('#btn-eyes');
+
+
+  container.innerHTML = template;
+
+  const btnShow = container.querySelector('#btn-eyes');
   const balance = container.querySelector('.balance');
 
   btnShow.addEventListener('click', function() {
@@ -73,17 +76,8 @@ export default () => {
       balance.style.display = 'block';
     }
 
-  });*/
+  });
 
-  /*const btnShow = container.querySelector('#btn-eyes');
-
-  btnShow.addEventListener('click', function() {
-    const balance = container.querySelector('.balance');
-    balance.classList.toggle("hide");
-
-  });*/
-
-  container.innerHTML = template;
   const btnLogout = container.querySelector('#icon-logout');
 
   const btn = container.querySelector('#icon-home');
@@ -149,7 +143,7 @@ export default () => {
         <div class="bank-card">
           <span class="account-type"> ${bank.instituicao}</span>
           <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+            <img id="logo-alfa" src="./img/logo-banco.jpeg" alt="Ícone open banking cor-de-rosa">
             
             <span class="account-type"> ${bank.tipo}</span>
           </div>
