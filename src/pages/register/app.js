@@ -11,7 +11,7 @@ export default () => {
   const container = document.createElement("div");
   const template = `  <div class="container-register">
       <div class="logo">
-          <img id="logo-safra" src="../../img/logo.png">
+          <img id="logo-safra" src="../img/logo.png">
       </div>
   
       <form class='container-inputs-register'>

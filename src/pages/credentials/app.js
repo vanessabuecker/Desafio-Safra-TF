@@ -3,11 +3,11 @@ export default () => {
   const template = `
     <div id="container-credentials">
       <div class="header-credentials">
-        <img class="logo-safra" src="../src/img/logo-home.png" alt="Logo Safra">
+        <img class="logo-safra" src="../img/logo-home.png" alt="Logo Safra">
         <p class="user-name">Olá, </p>
       </div>
       <div class="instruction-title">
-        <a href="#selectBank"><img id="arrow-icon" src="../src/img/arrow.png" alt="Ícone - seta para a esquerda"/></a>
+        <a href="#selectBank"><img id="arrow-icon" src="../img/arrow.png" alt="Ícone - seta para a esquerda"/></a>
       </div>
       <div id="form-credentials"
         <form>

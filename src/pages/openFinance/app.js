@@ -3,13 +3,13 @@ export default () => {
     const template = `
       <div class="container-home">
           <div class="header-credentials">
-              <img class="logo-safra" src="../src/img/logo-home.png" alt="Logo Safra">
+              <img class="logo-safra" src="../img/logo-home.png" alt="Logo Safra">
               <p class="user-name">Olá, Fulano </p>
           </div>
       
         <div class="title-container">
             <a href="#home">
-                <img id="arrow-icon" src="../src/img/arrow.png" alt="Ícone - seta para a esquerda">
+                <img id="arrow-icon" src="../img/arrow.png" alt="Ícone - seta para a esquerda">
             </a>
             <p class="title-text"> De onde você quer trazer seus dados?</p> 
         </div>
@@ -32,7 +32,7 @@ export default () => {
                 necessidade, além de poder gerenciar sua vida financeira em um só lugar, facilitando seu dia a dia. É simples, rápido, gratuito.  
               </p>
               <div class="avatar-container">
-                  <img class="icon-avatar" src="../src/img/icon-avatar.png" alt="Imagem do assistente virtual Safra"> 
+                  <img class="icon-avatar" src="../img/icon-avatar.jpg" alt="Imagem do assistente virtual Safra"> 
               </div>
           </div>
           <div class="open-finance-container">

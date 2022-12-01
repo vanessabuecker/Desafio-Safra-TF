@@ -149,7 +149,7 @@ export default () => {
         <div class="bank-card">
           <span class="account-type"> ${bank.instituicao}</span>
           <div class="logo-bank">
-            <img id="logo-alfa" src="./img/ReactBank.png" alt="Ícone open banking cor-de-rosa">
+            <img id="logo-alfa" src="./img/bankIcon.png" alt="Ícone open banking cor-de-rosa">
             
             <span class="account-type"> ${bank.tipo}</span>
           </div>
@@ -178,6 +178,13 @@ export default () => {
 
   return container;
 }
+
+
+
+
+
+
+
 
 
 
