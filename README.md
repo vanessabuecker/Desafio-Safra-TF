@@ -8,8 +8,7 @@
 * [6. Planejamento](#6-planejamento)
 * [7. Code Reviews](#7-code-reviews)
 * [8. Firebase e Firestore](#8-firebase-e-firestore)
-* [9. Implementações Futuras](9-#implementações-futuras)
-* [10. Desenvolvedoras](#10-desenvolvedoras)
+* [9. Desenvolvedoras](#10-desenvolvedoras)
 
 # 1. Talent Fest
 
@@ -56,7 +55,7 @@ Protótipo de alta fidelidade / mobile first
 ![Prototipo de alta 2](src/img/prototipoalta2.png) 
 ![Prototipo de alta 2](src/img/prototipoalta3.png)
 
-Paleta de cores
+Paleta de cores:
 A paleta de cores foi definida de acordo com as cores já usadas pelo banco Safra.
 
 O layout foi desenvolvido para ser intuitivo, simples, moderno e fluido, para oferecer a melhor experiência possível para o usuário.
@@ -75,15 +74,10 @@ Foram realizados pela equipe code reviews periodicos conforme o desenvolvimento 
 
 # 8. Firebase e Firestore
 
+Utilizamos o Firebase para gestão de usuário e base de dados. (Firebase Auth e Firestore).
 
-# 9. Implementações Futuras
 
-* 
-* 
-* 
-* 
-
-# 10. Desenvolvedoras
+# 9. Desenvolvedoras
 
 O projeto foi desenvolvido por:
 
