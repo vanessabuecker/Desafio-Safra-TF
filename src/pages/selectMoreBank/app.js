@@ -76,18 +76,15 @@ export default () => {
         const main = document.querySelector('#root');
         e.preventDefault();
         logout().then(() => {
-          window.location.hash = '';
+            window.location.hash = '';
         });
-      });
+    });
 
     const btnHome = container.querySelector('#icon-home');
 
     btnHome.addEventListener('click', () => {
         window.location.hash = '#home';
-      });
-
-
-
+    });
 
     return container;
 };

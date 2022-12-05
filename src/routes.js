@@ -21,25 +21,25 @@ const init = () => {
       main.innerHTML = '';
       main.appendChild(register());
       break;
-      case '#home':
-        main.innerHTML = '';
-        main.appendChild(home());
-        break;
-      case '#openFinance':
-        main.innerHTML = '';
-        main.appendChild(openFinance());
-        break;
-      case '#selectBank':
-        main.innerHTML = '';
-        main.appendChild(addNewBank());
-        break;
-      case '#selectMoreBank':
-        main.innerHTML = '';
-        main.appendChild(selectMorebank());
-        break;
-      case '#selectApp':
-        main.innerHTML = '';
-        main.appendChild(selectApp());
+    case '#home':
+      main.innerHTML = '';
+      main.appendChild(home());
+      break;
+    case '#openFinance':
+      main.innerHTML = '';
+      main.appendChild(openFinance());
+      break;
+    case '#selectBank':
+      main.innerHTML = '';
+      main.appendChild(addNewBank());
+      break;
+    case '#selectMoreBank':
+      main.innerHTML = '';
+      main.appendChild(selectMorebank());
+      break;
+    case '#selectApp':
+      main.innerHTML = '';
+      main.appendChild(selectApp());
       break;
     case '#openFinance':
       main.innerHTML = '';
