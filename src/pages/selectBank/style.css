@@ -38,21 +38,8 @@ body {
     height: 100%;
 }
 
-.title-container {
-    display: flex;
-    margin: 3% 0 1% 0;
-    justify-content: center;
-    align-items: center;
-}
-
 .arrow-icon-selectBank {
     width: 20%;
-}
-
-.title-text {
-    color: #00003C;
-    font-size: 2.5rem;
-    text-decoration: none;
 }
 
 .icon-bank {
@@ -60,14 +47,6 @@ body {
     width: 100%;
     justify-content: center;
     text-align: center;
-}
-
-.banks-container {
-    display: flex;
-    text-align: center;
-    width: 25%;
-    padding-top: 5rem;
-    margin: auto;
 }
 
 .container-more-selectBank {
@@ -98,10 +77,9 @@ body {
 
 .box-banks {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20%;
     grid-template-rows: 60%;
     gap: 10%;
-    align-items: center;
     justify-content: center;
     margin-bottom: 25%;
 }
@@ -128,23 +106,20 @@ body {
     }
 
     .banks-container {
-        width: 60%;
+        width: 50%;
     }
 
     .box-banks {
-        grid-template-columns: 36.33% 36.33% 36.33%;
+        grid-template-columns: 20% 20% 20%;
     }
 
     .arrow-icon-selectBank {
         width: 25%;
     }
 
-    .title-text {
-        margin-left: 0;
-    }
-
     .container-more-selectBank {
         margin-top: 10%;
+        margin-left: 2rem;
     }
 
     .icon-more-selectBank {
