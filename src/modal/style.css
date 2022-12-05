@@ -58,6 +58,7 @@
     overflow-y: scroll;
     max-height: 85%;
 }
+
 .container-ext::-webkit-scrollbar {
     width: 5px;
 }
@@ -68,17 +69,17 @@
     text-align: start;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px  solid #c7c2c2;
-    border-bottom: 1px  solid  #c6c3c3;
+    border-top: 1px solid #c7c2c2;
+    border-bottom: 1px solid #c6c3c3;
     font-size: 0.9rem;
     padding: 10px;
 }
 
-.box-ext{
+.box-ext {
     margin-top: 5%;
 }
 
-select{
+select {
     width: 85%;
     height: 4vh;
     margin: 10px;
@@ -88,12 +89,12 @@ select{
     color: #00003C;
 }
 
-.ext-item-deb{
+.ext-item-deb {
     color: red;
 }
 
-.ext-item-cred{ 
-    color: #00003C;  
+.ext-item-cred {
+    color: #00003C;
 }
 
 @media only screen and (max-width: 599px) and (min-width: 280px) {

@@ -45,14 +45,14 @@ export default () => {
   const linkBank = container.querySelector('#credentials-ok-conect');
   const modal = container.querySelector('#modal-ok-bank');
   const modalOkBtn = container.querySelector('#link-ok');
-  
+
   linkBank.addEventListener('click', () => {
     modal.classList.toggle('hide');
   })
-  
+
   modalOkBtn.addEventListener('click', () => {
     window.location.hash = '#home'
   })
-  
+
   return container;
 };

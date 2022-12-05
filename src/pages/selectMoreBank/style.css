@@ -45,11 +45,11 @@ body {
     text-align: center;
 }
 
-.banks-container{
+.banks-container {
     text-align: center;
     width: 60%;
     padding-top: 5rem;
-    margin:auto;
+    margin: auto;
 }
 
 .icon-more-selectBank {
@@ -127,7 +127,7 @@ body {
         height: 3vh;
     }
 
-    .box-banks-container{
+    .box-banks-container {
         margin: auto;
     }
 }

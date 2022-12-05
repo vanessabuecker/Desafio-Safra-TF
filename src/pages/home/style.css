@@ -152,7 +152,7 @@ body {
     font-weight: 600;
 }
 
-.bank-name{
+.bank-name {
     width: 100%;
     padding: 2px;
     color: #00003C;
@@ -193,7 +193,7 @@ body {
     height: 5.5vh;
 }
 
-#icon-home{
+#icon-home {
     width: 2.5vw;
 }
 
@@ -246,13 +246,13 @@ a {
     color: #00003C;
 }
 
-.talk-to-safira{
+.talk-to-safira {
     display: flex;
     float: right;
     padding: 5%;
 }
 
-#safira-whats{
+#safira-whats {
     width: 10vw;
 }
 
@@ -348,11 +348,11 @@ a {
         width: 10vw;
     }
 
-    #safira-whats{
+    #safira-whats {
         width: 25vw;
     }
 
-    .wrapper{
+    .wrapper {
         height: 0;
     }
 }

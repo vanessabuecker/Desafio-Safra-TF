@@ -1,8 +1,8 @@
 import { logout } from '../../lib/auth.js';
 
 export default () => {
-    const container = document.createElement('div');
-    const template = `      
+  const container = document.createElement('div');
+  const template = `      
      <div class="container-selectMoreApp">
         <div class="retangle-selectApp"> 
           <img id="logo-safra-selectApp" src="./img/logo-home.png" alt="Logo Safra">
@@ -65,23 +65,23 @@ export default () => {
         </div>
   `;
 
-    container.innerHTML = template;
+  container.innerHTML = template;
 
-    const btnLogout = container.querySelector('#icon-logout');
+  const btnLogout = container.querySelector('#icon-logout');
 
-    btnLogout.addEventListener('click', (e) => {
-        const main = document.querySelector('#root');
-        e.preventDefault();
-        logout().then(() => {
-          window.location.hash = '';
-        });
-      });
+  btnLogout.addEventListener('click', (e) => {
+    const main = document.querySelector('#root');
+    e.preventDefault();
+    logout().then(() => {
+      window.location.hash = '';
+    });
+  });
 
-    const btnHome = container.querySelector('#icon-home');
+  const btnHome = container.querySelector('#icon-home');
 
-    btnHome.addEventListener('click', () => {
-        window.location.hash = '#home';
-      });
+  btnHome.addEventListener('click', () => {
+    window.location.hash = '#home';
+  });
 
-    return container;
+  return container;
 };
