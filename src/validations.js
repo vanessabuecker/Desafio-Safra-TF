@@ -17,11 +17,9 @@ export function errorsFirebase(error) {
   }
 }
 
-export const validateRegister = (name, lastname, cpf, balance, email, password, passwordRepeat) => {
+export const validateRegister = (name, lastname, cpf, email, password, passwordRepeat) => {
   const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z]+(?:\.[a-zA-Z]+)*$/;
   const emailValid = regexEmail.test(email);
-  // const regexCpf = /^([0-9]){3}\.([0-9]){3}\.([0-9]){3}-([0-9]){2}$/;
-  // const cpfValid = regexCpf.test(cpf);
 
   if (!name && !cpf && !email && !password && !passwordRepeat) {
     return 'Por favor, preencha todos os campos!';
@@ -35,12 +33,6 @@ export const validateRegister = (name, lastname, cpf, balance, email, password, 
   if (cpf === '') {
     return 'Preencha o campo de CPF!';
   }
-  // if (cpfValid === false) {
-  //  return 'Insira um cpf válido (ex: 000.000.00-00)';
-  // }
-  if (balance === '') {
-    return 'Preencha o campo de saldo!';
-  }
   if (email === '') {
     return 'Preencha o campo de e-mail!';
   }
@@ -52,23 +44,19 @@ export const validateRegister = (name, lastname, cpf, balance, email, password, 
   }
   if (password !== passwordRepeat) {
     return 'As duas senhas não são iguais';
-  }  
-  
+  }
+
   return '';
 };
 
 export const validateLogin = (email, password, cpf) => {
   const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z]+(?:\.[a-zA-Z]+)*$/;
   const emailValid = regexEmail.test(email);
-  // const regexCpf = /^([0-9]){3}\.([0-9]){3}\.([0-9]){3}-([0-9]){2}$/;
-  // const cpfValid = regexCpf.test(cpf);
 
-  if (!cpf && !email && !password ) {
+  if (!cpf && !email && !password) {
     return 'Por favor, preencha todos os campos!';
   }
-  // if (cpfValid === false) {
-  //   return 'Insira um cpf válido (ex: 000.000.00-00)';
-  // }
+
   if (cpf === '') {
     return 'Preencha o campo de CPF!';
   }
@@ -81,6 +69,6 @@ export const validateLogin = (email, password, cpf) => {
   if (password === '') {
     return 'Digite sua senha!';
   }
-  
+
   return '';
 };

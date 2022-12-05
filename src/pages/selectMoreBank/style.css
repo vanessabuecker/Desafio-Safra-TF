@@ -38,23 +38,6 @@ body {
     height: 100%;
 }
 
-.title-container {
-    display: flex;
-    margin: 3% 0 1% 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.arrow-icon-selectBank {
-    width: 20%;
-}
-
-.title-text {
-    color: #00003C;
-    font-size: 2.5rem;
-    text-decoration: none;
-}
-
 .icon-bank {
     display: flex;
     width: 100%;
@@ -62,19 +45,11 @@ body {
     text-align: center;
 }
 
-.banks-container {
-    display: flex;
+.banks-container{
     text-align: center;
-    width: 25%;
+    width: 60%;
     padding-top: 5rem;
-    margin: auto;
-}
-
-.container-more-selectBank {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: auto;
+    margin:auto;
 }
 
 .icon-more-selectBank {
@@ -93,17 +68,31 @@ body {
 .content-bottom-retangle {
     display: flex;
     justify-content: space-around;
-    padding: 2%;
+    padding: 1%;
 }
 
-.box-banks {
+.box-banks-more {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20% 20%;
     grid-template-rows: 60%;
     gap: 10%;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 25%;
+}
+
+.name-bank {
+    padding: 10px;
+    border-top: 1px solid #ea3b8d;
+    border-bottom: 1px solid #ea3b8d;
+}
+
+.name-bank a {
+    color: #00003C;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.name-bank a:hover {
+    color: #F54868;
 }
 
 @media only screen and (max-width: 845px) and (min-width: 389px) {
@@ -128,28 +117,17 @@ body {
     }
 
     .banks-container {
-        width: 60%;
-    }
-
-    .box-banks {
-        grid-template-columns: 36.33% 36.33% 36.33%;
-    }
-
-    .arrow-icon-selectBank {
-        width: 25%;
-    }
-
-    .title-text {
-        margin-left: 0;
-    }
-
-    .container-more-selectBank {
+        display: flex;
+        width: 90%;
         margin-top: 10%;
     }
 
     .icon-more-selectBank {
         width: fit-content;
         height: 3vh;
+    }
 
+    .box-banks-container{
+        margin: auto;
     }
 }

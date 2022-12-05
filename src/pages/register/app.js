@@ -21,8 +21,6 @@ export default () => {
           <label for='text-name' class='text-inputs'>Sobrenome</label>
           <input class='inputs' id='input-cpf' placeholder="000.000.00-00"/>
           <label for='text-name' class='text-inputs'>CPF</label>
-          <input class='inputs' type='number' name='profile-name' id='input-balance'>
-          <label for='text-name' class='text-inputs'>Valor do saldo </label>
           <input class='inputs' type='email' name='email' id='input-email-registration' required>
           <label for='text-email' class='text-inputs'>E-mail</label>
           <input class='inputs' type='password' id='password'>
@@ -50,7 +48,6 @@ export default () => {
   const passwordRepeat = container.querySelector("#repeat-password")
   const btnRegistration = container.querySelector("#btn-enter");
   const cpf = container.querySelector("#input-cpf");
-  const balance = container.querySelector("#input-balance");
   const errorMessage = container.querySelector(".div-error");
 
   btnRegistration.addEventListener('click', (event) => {
@@ -59,7 +56,6 @@ export default () => {
       name.value,
       lastName.value,
       cpf.value,
-      balance.value,
       email.value,
       password.value,
       passwordRepeat.value,
