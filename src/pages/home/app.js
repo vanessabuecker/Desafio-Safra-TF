@@ -234,14 +234,19 @@ export default () => {
     }).join('');
 
     container.querySelector('.container-bank').innerHTML += banksTemplate;
-
   }
 
   showBanks();
 
   return container;
-
 }
+
+
+
+
+
+
+
 
 
 
