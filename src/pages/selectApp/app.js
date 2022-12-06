@@ -4,7 +4,7 @@ export default () => {
     <div class="container-selectBank">
        <div class="retangle-selectBank"> 
          <img id="logo-safra-selectBank" src="./img/logo-home.png" alt="Logo Safra">
-         <p class="user-name">Olá, </p>
+         <p class="user-name">Olá, Vanessa!</p>
        </div>
   
        <div class="title-container">

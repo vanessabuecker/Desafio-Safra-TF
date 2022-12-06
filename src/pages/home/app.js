@@ -9,7 +9,7 @@ export default () => {
   <div class="retangle-home">
       <div class="logo-home">
           <img id="logo-safra-home" href='#home' src="./img/logo-home.png" alt="Logo Safra"> <span class="userName">Olá,
-              Fulano!</span>
+              Vanessa!</span>
       </div>
       <div class="total-balance">
         <p class="txt-balance">Saldo disponível</p>
