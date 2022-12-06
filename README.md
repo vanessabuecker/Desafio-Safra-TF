@@ -52,8 +52,7 @@ Protótipo de baixa fidelidade
 Protótipo de alta fidelidade / mobile first
 
 ![Prototipo de alta 1](src/img/prototipoalta1.png) 
-![Prototipo de alta 2](src/img/prototipoalta2.png) 
-![Prototipo de alta 2](src/img/prototipoalta3.png)
+![Prototipo de alta 2](src/img/prototipoalta2.jpeg
 
 Paleta de cores:
 A paleta de cores foi definida de acordo com as cores já usadas pelo banco Safra.
