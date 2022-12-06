@@ -65,7 +65,7 @@ O layout foi desenvolvido para ser intuitivo, simples, moderno e fluido, para of
 
 Trouxemos uma proposta de inovação com a criação da simpática atendente virtual do Safra, a Safira, com o objetivo de criar um vínculo e humanizar a experiência digital do cliente com a marca, além de oferecer informações e esclarecimentos importantes a respeito dos serviços de open finance.
 
-![Safira](src/img/safira.png = 250x450) 
+![Safira](src/img/safira.png width="200" height="400") 
 
 ## 7. Planejamento
 
