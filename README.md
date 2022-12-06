@@ -54,7 +54,7 @@ Protótipo de alta fidelidade / mobile first
 
 ![Prototipo de alta 1](src/img/prototipoalta1.png) 
 
-![Prototipo de alta 2](src/img/prototipoalta2.png) 
+![Prototipo de alta 2](src/img/prototipoalta2.jpeg) 
 
 Paleta de cores:
 A paleta de cores foi definida de acordo com as cores já utilizadas pelo banco Safra, respeitando sua identificação visual.
@@ -65,7 +65,7 @@ O layout foi desenvolvido para ser intuitivo, simples, moderno e fluido, para of
 
 Trouxemos uma proposta de inovação com a criação da simpática atendente virtual do Safra, a Safira, com o objetivo de criar um vínculo e humanizar a experiência digital do cliente com a marca, além de oferecer informações e esclarecimentos importantes a respeito dos serviços de open finance.
 
-![Safira](src/img/safira.png | width=300) 
+![Safira](src/img/safira.png = 250x450) 
 
 ## 7. Planejamento
 
@@ -73,7 +73,7 @@ O planejamento foi realizado utilizando a metologia ágil (SCRUM) e Kanban, send
 
 Todos os dias, realizamos dailys com toda a equipe para analisar o que foi desenvolvido no dia anterior e o que seria desenvolvido no dia presente, identificar problemas e realizar ajustes necessários, sempre definindo prioridades e focando no MVP (Produto Mínimo Viável), já que o prazo para entrega do desafio foi de apenas 3 dias. Foi desenvolvido um trabalho colaborativo, respeitoso e empático em equipe para se conseguir atingir um bom resultado final.
 
-![Planejamento](src/img/planning.png) 
+![Planejamento](src/img/planning.jpeg) 
 
 ## 8. Code Reviews
 
