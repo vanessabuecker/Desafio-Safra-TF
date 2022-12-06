@@ -45,7 +45,7 @@ body {
     border-radius: 5px;
     background-color: #00003C;
     color: white;
-    margin: 10% 0 10% 0;
+    margin: 5% 0 5% 0;
     font-size: 1.3rem;
     cursor: pointer;
     align-items: center;
@@ -60,6 +60,7 @@ body {
     font-size: 0.9rem;
     color: #00003C;
     text-decoration: none;
+    margin-top: 45%;
 }
 
 .text-inputs{
@@ -80,7 +81,7 @@ body {
     color: red;
     margin: auto;
     text-align: center;
-    padding: 5px;
+    margin-bottom: 5%;
 }
 
 @media only screen and (max-width: 845px) and (min-width: 389px) {
@@ -91,13 +92,14 @@ body {
 
     #logo-safra {
         width: 60%;
-        margin: 10% 0 20% 0;
+        margin: 5% 0 5% 0;
     }
     
     .btn-enter {
-        width: 60%;
+        width: 50%;
         height: 6vh;
-        margin: 35% 0 25% 0;
+        margin: 10% 0 10% 0;
+        padding: 0;
     }
 
 }
