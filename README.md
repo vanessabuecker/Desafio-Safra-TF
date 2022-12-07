@@ -48,6 +48,7 @@ História do usuário 6:
 Os protótipos foram desenvolvidos no Figma.
 
 Protótipo de baixa fidelidade
+
 ![Prototipo de baixa](src/img/prototipobaixa.png) 
 
 Protótipo de alta fidelidade / mobile first
