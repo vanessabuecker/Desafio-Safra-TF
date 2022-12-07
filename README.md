@@ -65,7 +65,7 @@ O layout foi desenvolvido para ser intuitivo, simples, moderno e fluido, para of
 
 Trouxemos uma proposta de inovação com a criação da simpática atendente virtual do Safra, a Safira, com o objetivo de criar um vínculo e humanizar a experiência digital do cliente com a marca, além de oferecer informações e esclarecimentos importantes a respeito dos serviços de open finance.
 
-![Safira] <img src="src/img/safira.png" alt="Safira" style="height: 200px;"/>
+<img src="src/img/safira.png" alt="Safira" style="height: 200px;"/>
 
 
 ## 7. Planejamento
@@ -74,7 +74,7 @@ O planejamento foi realizado utilizando a metologia ágil (SCRUM) e Kanban, send
 
 Todos os dias, realizamos dailys com toda a equipe para analisar o que foi desenvolvido no dia anterior e o que seria desenvolvido no dia presente, identificar problemas e realizar ajustes necessários, sempre definindo prioridades e focando no MVP (Produto Mínimo Viável), já que o prazo para entrega do desafio foi de apenas 3 dias. Foi desenvolvido um trabalho colaborativo, respeitoso e empático em equipe para se conseguir atingir um bom resultado final.
 
-![Planejamento](src/img/planning.jpeg) 
+<img src="src/img/planning.jpeg" alt="Planning" style="height: 500px;"/>
 
 ## 8. Code Reviews
 
